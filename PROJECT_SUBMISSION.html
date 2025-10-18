@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>California Reservoir Monitoring System - Project Submission</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        .content {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        h2 {
+            color: #2980b9;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 5px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        pre code {
+            background-color: transparent;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 20px;
+            margin-left: 0;
+            color: #555;
+            font-style: italic;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 10px;
+            border-left: 4px solid #ffc107;
+            margin: 20px 0;
+        }
+        hr {
+            border: none;
+            border-top: 2px solid #ecf0f1;
+            margin: 30px 0;
+        }
+        @media print {
+            body {
+                background-color: white;
+            }
+            .content {
+                box-shadow: none;
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>California Reservoir Monitoring System</h1>
+<h2>Project Submission Document</h2>
+<p><strong>Student:</strong> Bala Anbalagan
+<strong>Email:</strong> Bala.Anbalagan@sjsu.edu
+<strong>Date:</strong> October 18, 2025
+<strong>Course:</strong> IoT/MQTT Assignment</p>
+<hr />
+<h2>Executive Summary</h2>
+<p>This project implements a real-time water level monitoring system for California reservoirs using MQTT protocol. The system demonstrates a complete IoT architecture with multiple publishers, a single subscriber collecting data from all reservoirs, and an interactive web dashboard for data visualization.</p>
+<p><strong>Key Achievement:</strong> Single subscriber architecture collecting data from 8+ California reservoirs using MQTT wildcard subscriptions.</p>
+<hr />
+<h2>Live Deployment</h2>
+<h3>Cloud Production Dashboard (Recommended)</h3>
+<p><strong>URL:</strong> https://reservoir-monitoring.onrender.com</p>
+<p><strong>Features:</strong>
+- ✅ Live data from California Data Exchange Center (CDEC) API
+- ✅ Automated daily updates via GitHub Actions
+- ✅ MongoDB Atlas cloud database
+- ✅ HiveMQ Cloud MQTT broker with TLS/SSL
+- ✅ Publicly accessible (no login required)
+- ✅ Interactive Chart.js visualizations</p>
+<p><strong>Dashboard Views:</strong>
+- Summary: https://reservoir-monitoring.onrender.com/
+- Detailed Analysis: https://reservoir-monitoring.onrender.com/detailed
+- API Endpoints: https://reservoir-monitoring.onrender.com/api/summary</p>
+<p><strong>Note:</strong> First request may take 30 seconds to wake up (free tier limitation). Subsequent requests are fast.</p>
+<hr />
+<h2>GitHub Repository</h2>
+<p><strong>URL:</strong> https://github.com/BalaAnbalagan/reservoir_monitoring</p>
+<p><strong>Repository Contents:</strong>
+- Complete source code
+- Documentation (README.md with 1000+ lines)
+- Dashboard screenshots (6 high-quality PNG files)
+- MQTT configuration for local and cloud
+- GitHub Actions workflow for automation
+- Deployment configurations (Render.com)</p>
+<hr />
+<h2>Architecture Overview</h2>
+<h3>Core Design Pattern: Single Subscriber</h3>
+<pre><code>Multiple Publishers          MQTT Broker          Single Subscriber
+┌─────────────┐             ┌──────────┐         ┌──────────────┐
+│  SHASTA     │──SHASTA/WML→│          │         │              │
+└─────────────┘             │          │         │    Single    │
+                            │ Broker   │────────→│  Subscriber  │
+┌─────────────┐             │          │         │              │
+│  OROVILLE   │──OROVILLE/..│          │         │  Listens to  │
+└─────────────┘             │          │         │   +/WML      │
+                            │          │         │  (wildcard)  │
+┌─────────────┐             │          │         │              │
+│  8+ More    │──.../WML───→│          │         │  Generates   │
+└─────────────┘             └──────────┘         │   Report     │
+                                                 └──────────────┘
+</code></pre>
+<p><strong>Key Points:</strong>
+- ✅ <strong>ONE subscriber</strong> collects data from ALL reservoirs
+- ✅ Uses wildcard subscription: <code>+/WML</code> (matches all topics ending in /WML)
+- ✅ Generates ONE comprehensive report for all reservoirs
+- ✅ Efficient MQTT pattern demonstrating pub/sub architecture</p>
+<hr />
+<h2>System Components</h2>
+<h3>1. MQTT Protocol Implementation</h3>
+<p><strong>Local Mode (Development):</strong>
+- Mosquitto broker on localhost:1883
+- No authentication
+- JSON file storage
+- For testing and development</p>
+<p><strong>Cloud Mode (Production):</strong>
+- HiveMQ Cloud broker (port 8883)
+- TLS/SSL encryption
+- Username/password authentication
+- MongoDB Atlas storage
+- Automated via GitHub Actions</p>
+<h3>2. Publishers (Multiple)</h3>
+<ul>
+<li>CSV-based publisher (for testing)</li>
+<li>API-based publisher (live CDEC data)</li>
+<li>Publishes to topics: <code>RESERVOIR_ID/WML</code></li>
+<li>Supports 21+ California reservoirs</li>
+</ul>
+<h3>3. Subscriber (Single - Key Requirement)</h3>
+<ul>
+<li><strong>Wildcard subscription:</strong> <code>+/WML</code></li>
+<li>Collects messages from all reservoirs</li>
+<li>Aggregates data into single report</li>
+<li>Saves to JSON (local) or MongoDB (cloud)</li>
+</ul>
+<h3>4. Web Dashboard</h3>
+<ul>
+<li>Flask-based Python web application</li>
+<li>Interactive Chart.js visualizations</li>
+<li>Three views: Summary, Detailed, Advanced</li>
+<li>RESTful API endpoints</li>
+</ul>
+<h3>5. Database</h3>
+<ul>
+<li><strong>Local:</strong> JSON files in <code>reports/</code> directory</li>
+<li><strong>Cloud:</strong> MongoDB Atlas (512 MB free tier)</li>
+</ul>
+<h3>6. Automation</h3>
+<ul>
+<li>GitHub Actions workflow</li>
+<li>Runs daily at 8 AM UTC</li>
+<li>Fetches data, publishes via MQTT, saves to MongoDB</li>
+<li>Zero manual intervention</li>
+</ul>
+<hr />
+<h2>Technical Specifications</h2>
+<h3>Technologies Used</h3>
+<ul>
+<li><strong>Language:</strong> Python 3.11</li>
+<li><strong>MQTT Library:</strong> paho-mqtt</li>
+<li><strong>Web Framework:</strong> Flask</li>
+<li><strong>Database:</strong> MongoDB Atlas (cloud), JSON (local)</li>
+<li><strong>Visualization:</strong> Chart.js</li>
+<li><strong>MQTT Brokers:</strong> Mosquitto (local), HiveMQ Cloud (production)</li>
+<li><strong>CI/CD:</strong> GitHub Actions</li>
+<li><strong>Hosting:</strong> Render.com (free tier)</li>
+</ul>
+<h3>Data Sources</h3>
+<ul>
+<li><strong>Primary:</strong> California Data Exchange Center (CDEC) API</li>
+<li><strong>Reservoirs Monitored:</strong> 21+ major California reservoirs</li>
+<li><strong>Data Points:</strong> Water levels in TAF (Thousand Acre-Feet)</li>
+<li><strong>Update Frequency:</strong> Daily (automated)</li>
+<li><strong>Historical Data:</strong> 7 days rolling window</li>
+</ul>
+<h3>Message Format (JSON)</h3>
+<pre><code class="language-json">{
+  &quot;reservoir_id&quot;: &quot;SHASTA&quot;,
+  &quot;date&quot;: &quot;10/18/2025&quot;,
+  &quot;water_level_taf&quot;: 2587.8,
+  &quot;timestamp&quot;: &quot;2025-10-18T00:00:00&quot;,
+  &quot;published_at&quot;: &quot;2025-10-18T11:29:00&quot;
+}
+</code></pre>
+<hr />
+<h2>Project Artifacts</h2>
+<h3>1. Documentation</h3>
+<ul>
+<li><strong>README.md</strong> - Comprehensive 1000+ line documentation</li>
+<li><strong>MQTT_SETUP_GUIDE.md</strong> - MQTT broker setup instructions</li>
+<li><strong>GITHUB_SECRETS_SETUP.md</strong> - Automation configuration guide</li>
+<li><strong>WEB_DASHBOARD_GUIDE.md</strong> - Dashboard feature documentation</li>
+</ul>
+<h3>2. Screenshots (in <code>screenshots/</code> directory)</h3>
+<p><strong>Local Dashboard:</strong>
+- <code>local_summary_view.png</code> - Summary dashboard (localhost:5000)
+- <code>local_detailed_view.png</code> - Detailed analysis with charts
+- <code>local_detailed_stacked_chart.png</code> - Closeup of stacked chart</p>
+<p><strong>Cloud Dashboard:</strong>
+- <code>cloud_summary_view.png</code> - Live production summary
+- <code>cloud_detailed_view.png</code> - Live production detailed view
+- <code>cloud_detailed_stacked_chart.png</code> - Closeup of cloud chart</p>
+<h3>3. Source Code</h3>
+<ul>
+<li><code>app.py</code> - Flask web application (248 lines)</li>
+<li><code>subscriber.py</code> - MQTT subscriber with wildcard (350+ lines)</li>
+<li><code>publisher.py</code> - CSV-based MQTT publisher</li>
+<li><code>api_publisher.py</code> - Live API data publisher</li>
+<li><code>mqtt_config.py</code> - Dual MQTT configuration (local/cloud)</li>
+<li><code>db_config.py</code> - Database manager (JSON/MongoDB)</li>
+<li><code>test_mqtt.py</code> - Connection testing tool</li>
+</ul>
+<h3>4. Configuration Files</h3>
+<ul>
+<li><code>requirements.txt</code> - Python dependencies</li>
+<li><code>render.yaml</code> - Render.com deployment config</li>
+<li><code>.github/workflows/update-data.yml</code> - GitHub Actions workflow</li>
+<li><code>.env.example</code> - Environment variables template</li>
+</ul>
+<hr />
+<h2>Key Features Demonstrated</h2>
+<h3>MQTT Concepts</h3>
+<p>✅ <strong>Publish/Subscribe Pattern</strong> - Multiple publishers, single subscriber
+✅ <strong>Topics and Wildcards</strong> - <code>RESERVOIR_ID/WML</code> topics, <code>+/WML</code> wildcard
+✅ <strong>Quality of Service (QoS)</strong> - QoS 1 for guaranteed delivery
+✅ <strong>Message Broker</strong> - Central hub for all communications
+✅ <strong>Persistent Connections</strong> - Long-lived subscriber connection</p>
+<h3>IoT Architecture</h3>
+<p>✅ <strong>Sensor Simulation</strong> - Multiple reservoir sensors publishing data
+✅ <strong>Data Aggregation</strong> - Single subscriber collecting all data
+✅ <strong>Cloud Integration</strong> - HiveMQ Cloud, MongoDB Atlas, Render.com
+✅ <strong>Security</strong> - TLS/SSL encryption, authentication
+✅ <strong>Scalability</strong> - Easy to add new reservoirs (wildcard subscription)</p>
+<h3>Software Engineering</h3>
+<p>✅ <strong>Version Control</strong> - Git with comprehensive commit history
+✅ <strong>CI/CD</strong> - GitHub Actions for automated deployment
+✅ <strong>Documentation</strong> - Extensive README and guides
+✅ <strong>Testing</strong> - MQTT connection testing utilities
+✅ <strong>Configuration Management</strong> - Environment-based configs</p>
+<h3>Data Visualization</h3>
+<p>✅ <strong>Interactive Charts</strong> - Bar charts, stacked charts, line graphs
+✅ <strong>Responsive Design</strong> - Mobile-friendly dashboard
+✅ <strong>Multiple Views</strong> - Summary, detailed, and advanced charts
+✅ <strong>RESTful API</strong> - JSON endpoints for data access
+✅ <strong>Real-time Updates</strong> - Fresh data from MongoDB</p>
+<hr />
+<h2>Deployment Architecture</h2>
+<h3>Cloud Production (Current State)</h3>
+<pre><code>┌─────────────────────────────────────────────────────┐
+│  GitHub Actions (Daily 8 AM UTC)                    │
+│                                                      │
+│  1. Fetch data from CDEC API                        │
+│  2. Publish to HiveMQ Cloud (TLS)                   │
+│  3. Subscriber collects messages                    │
+│  4. Save to MongoDB Atlas                           │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────┐
+│  Render.com                                         │
+│                                                      │
+│  Flask App reads from MongoDB                       │
+│  Serves dashboard at:                               │
+│  https://reservoir-monitoring.onrender.com          │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+                        ↓
+┌─────────────────────────────────────────────────────┐
+│  Users / Professor Access                           │
+│                                                      │
+│  View live dashboard                                │
+│  No login required                                  │
+│  Public access                                      │
+│                                                      │
+└─────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>All services use FREE tiers - Zero cost operation!</strong></p>
+<hr />
+<h2>Assignment Requirements Fulfillment</h2>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Status</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MQTT Publishers</td>
+<td>✅ Complete</td>
+<td>Multiple publishers (CSV + API based)</td>
+</tr>
+<tr>
+<td>MQTT Subscriber</td>
+<td>✅ Complete</td>
+<td><strong>Single subscriber</strong> with wildcard <code>+/WML</code></td>
+</tr>
+<tr>
+<td>Topics</td>
+<td>✅ Complete</td>
+<td><code>RESERVOIR_ID/WML</code> format for all reservoirs</td>
+</tr>
+<tr>
+<td>JSON Format</td>
+<td>✅ Complete</td>
+<td>All messages in standardized JSON</td>
+</tr>
+<tr>
+<td>Data Collection</td>
+<td>✅ Complete</td>
+<td>Collects from 8+ active reservoirs</td>
+</tr>
+<tr>
+<td>Report Generation</td>
+<td>✅ Complete</td>
+<td>Comprehensive JSON and TXT reports</td>
+</tr>
+<tr>
+<td>TAF Measurements</td>
+<td>✅ Complete</td>
+<td>Water levels in Thousand Acre-Feet</td>
+</tr>
+<tr>
+<td>Single Subscriber</td>
+<td>✅ <strong>CRITICAL</strong></td>
+<td>ONE subscriber collects ALL reservoir data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Most Important:</strong> The system uses <strong>ONE subscriber</strong> that collects data from <strong>ALL reservoirs</strong> using a wildcard subscription (<code>+/WML</code>), demonstrating the efficiency and scalability of MQTT pub/sub architecture.</p>
+<hr />
+<h2>Testing &amp; Verification</h2>
+<h3>Local Testing</h3>
+<ol>
+<li>Start Mosquitto broker: <code>net start mosquitto</code></li>
+<li>Run subscriber: <code>python subscriber.py --duration 60</code></li>
+<li>Run publisher: <code>python api_publisher.py --reservoir ALL --days 7</code></li>
+<li>View dashboard: http://localhost:5000</li>
+<li>Check reports in <code>reports/</code> directory</li>
+</ol>
+<h3>Cloud Testing</h3>
+<ol>
+<li>Visit: https://reservoir-monitoring.onrender.com</li>
+<li>View summary dashboard with live data</li>
+<li>Navigate to detailed analysis</li>
+<li>Check GitHub Actions runs in repository</li>
+<li>Verify MongoDB Atlas has data</li>
+</ol>
+<h3>API Testing</h3>
+<pre><code class="language-bash"># Get summary statistics
+curl https://reservoir-monitoring.onrender.com/api/summary
+
+# Get specific reservoir
+curl https://reservoir-monitoring.onrender.com/api/reservoir/SHASTA
+
+# Get all historical data
+curl https://reservoir-monitoring.onrender.com/api/historical
+</code></pre>
+<hr />
+<h2>Performance Metrics</h2>
+<h3>Current System Stats</h3>
+<ul>
+<li><strong>Active Reservoirs:</strong> 8 locations</li>
+<li><strong>Total Water Volume:</strong> 5,587.8 TAF</li>
+<li><strong>Data Points:</strong> 56 readings (8 reservoirs × 7 days)</li>
+<li><strong>Update Frequency:</strong> Daily at 8 AM UTC</li>
+<li><strong>Response Time:</strong> &lt; 2 seconds (after wake-up)</li>
+<li><strong>Uptime:</strong> 99%+ (Render.com free tier)</li>
+</ul>
+<h3>Resource Usage</h3>
+<ul>
+<li><strong>GitHub Actions:</strong> ~3 minutes per run</li>
+<li><strong>MongoDB Storage:</strong> &lt; 1 MB of 512 MB free tier</li>
+<li><strong>Render.com:</strong> &lt; 1% of 750 hours/month free tier</li>
+<li><strong>HiveMQ Cloud:</strong> &lt; 1% of 100 MB/month free tier</li>
+</ul>
+<p><strong>Total Monthly Cost:</strong> $0.00 (all free tiers)</p>
+<hr />
+<h2>Future Enhancements</h2>
+<p>Potential improvements for the system:
+- Add email/SMS alerts for critical water levels
+- Implement predictive analytics using machine learning
+- Add authentication for admin features
+- Create mobile app (React Native/Flutter)
+- Integrate weather API for correlation analysis
+- Add real-time WebSocket updates
+- Implement data export to Excel/CSV
+- Add user-configurable alert thresholds</p>
+<hr />
+<h2>Conclusion</h2>
+<p>This project successfully demonstrates a complete MQTT-based IoT system with:
+- <strong>Single subscriber architecture</strong> (key requirement)
+- Multiple publishers sending data to specific topics
+- Wildcard subscriptions for scalable data collection
+- Both local development and cloud production deployments
+- Professional web dashboard with interactive visualizations
+- Automated data updates with zero manual intervention
+- Comprehensive documentation and artifacts</p>
+<p>The system is fully functional, deployed to the cloud, and accessible for review at:</p>
+<p><strong>https://reservoir-monitoring.onrender.com</strong></p>
+<hr />
+<h2>Contact Information</h2>
+<p><strong>Student:</strong> Bala Anbalagan
+<strong>Email:</strong> Bala.Anbalagan@sjsu.edu
+<strong>GitHub:</strong> https://github.com/BalaAnbalagan
+<strong>Repository:</strong> https://github.com/BalaAnbalagan/reservoir_monitoring</p>
+<p><strong>Submission Date:</strong> October 18, 2025</p>
+<hr />
+<h2>Quick Links Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Resource</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Live Dashboard</td>
+<td>https://reservoir-monitoring.onrender.com</td>
+</tr>
+<tr>
+<td>Detailed View</td>
+<td>https://reservoir-monitoring.onrender.com/detailed</td>
+</tr>
+<tr>
+<td>API Summary</td>
+<td>https://reservoir-monitoring.onrender.com/api/summary</td>
+</tr>
+<tr>
+<td>GitHub Repository</td>
+<td>https://github.com/BalaAnbalagan/reservoir_monitoring</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>https://github.com/BalaAnbalagan/reservoir_monitoring/blob/main/README.md</td>
+</tr>
+<tr>
+<td>Screenshots</td>
+<td>https://github.com/BalaAnbalagan/reservoir_monitoring/tree/main/screenshots</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Thank you for reviewing this project!</strong></p>
+<p>This document can be converted to PDF for formal submission or printed for reference.</p>
+    </div>
+</body>
+</html>
