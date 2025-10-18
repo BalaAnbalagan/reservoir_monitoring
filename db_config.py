@@ -11,7 +11,7 @@ from datetime import datetime
 DB_MODE = os.environ.get('DB_MODE', 'json')
 
 # MongoDB connection string from environment variable
-MONGODB_URI = os.environ.get('MONGODB_URI', 'mongodb+srv://reservoir_admin:zfUFiqhZgD48NO8W@reservoir-monitoring.lmdpkq6.mongodb.net/?retryWrites=true&w=majority&appName=reservoir-monitoring')
+MONGODB_URI = os.environ.get('MONGODB_URI', None)  # No default - must be set via environment variable
 
 # Database and collection names
 DATABASE_NAME = 'reservoir_monitoring'

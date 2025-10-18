@@ -576,10 +576,10 @@ Users access live dashboard
 1. Go to https://console.hivemq.cloud and sign up
 2. Create a new cluster (select Free tier)
 3. Wait 2-3 minutes for cluster provisioning
-4. Note your cluster URL (e.g., `7f5a2a82095f4558a5ce236d5cbb146d.s1.eu.hivemq.cloud`)
+4. Note your cluster URL (e.g., `your-cluster-id.s1.eu.hivemq.cloud`)
 5. Create credentials:
    - Click "Access Management"
-   - Add new user (e.g., username: `wateradm`, password: `CAwater2025!`)
+   - Add new user (choose a secure username and password)
 6. Save your credentials securely
 
 ---
@@ -600,7 +600,7 @@ Users access live dashboard
    - Click "Connect" → "Connect your application"
    - Copy the connection string
    - Replace `<password>` with your actual password
-   - Example: `mongodb+srv://reservoir_admin:zfUFiqhZgD48NO8W@reservoir-monitoring.lmdpkq6.mongodb.net/?retryWrites=true&w=majority`
+   - Example: `mongodb+srv://reservoir_admin:<password>@reservoir-monitoring.lmdpkq6.mongodb.net/?retryWrites=true&w=majority`
 
 ---
 
@@ -615,10 +615,10 @@ GitHub Secrets store sensitive credentials securely for GitHub Actions.
 
 | Secret Name | Value | Example |
 |-------------|-------|---------|
-| `MQTT_CLOUD_BROKER` | Your HiveMQ cluster URL | `7f5a2a82095f4558a5ce236d5cbb146d.s1.eu.hivemq.cloud` |
+| `MQTT_CLOUD_BROKER` | Your HiveMQ cluster URL | `your-cluster-id.s1.eu.hivemq.cloud` |
 | `MQTT_CLOUD_PORT` | HiveMQ port | `8883` |
-| `MQTT_CLOUD_USER` | HiveMQ username | `wateradm` |
-| `MQTT_CLOUD_PASS` | HiveMQ password | `CAwater2025!` |
+| `MQTT_CLOUD_USER` | HiveMQ username | `your_username` |
+| `MQTT_CLOUD_PASS` | HiveMQ password | `your_password` |
 | `MONGODB_URI` | MongoDB connection string | `mongodb+srv://reservoir_admin:password@...` |
 
 See [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md) for detailed instructions with screenshots.

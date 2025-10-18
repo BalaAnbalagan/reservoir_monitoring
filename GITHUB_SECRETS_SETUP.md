@@ -22,7 +22,7 @@ Click **"New repository secret"** for each of these:
 
 #### Secret 1: MQTT_CLOUD_BROKER
 - **Name**: `MQTT_CLOUD_BROKER`
-- **Value**: `7f5a2a82095f4558a5ce236d5cbb146d.s1.eu.hivemq.cloud`
+- **Value**: `your-cluster-id.s1.eu.hivemq.cloud` (replace with YOUR HiveMQ cluster URL)
 - Click **"Add secret"**
 
 #### Secret 2: MQTT_CLOUD_PORT
@@ -32,12 +32,12 @@ Click **"New repository secret"** for each of these:
 
 #### Secret 3: MQTT_CLOUD_USER
 - **Name**: `MQTT_CLOUD_USER`
-- **Value**: `wateradm`
+- **Value**: `your_hivemq_username` (replace with YOUR HiveMQ username)
 - Click **"Add secret"**
 
 #### Secret 4: MQTT_CLOUD_PASS
 - **Name**: `MQTT_CLOUD_PASS`
-- **Value**: `CAwater2025!`
+- **Value**: `your_hivemq_password` (replace with YOUR HiveMQ password)
 - Click **"Add secret"**
 
 ### 3. Verify Secrets Added

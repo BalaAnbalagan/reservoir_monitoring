@@ -16,12 +16,12 @@ LOCAL_CONFIG = {
 }
 
 # Cloud MQTT Configuration (HiveMQ Cloud)
-# Set these in environment variables or replace with your values
+# IMPORTANT: Set these in environment variables - no defaults for security
 CLOUD_CONFIG = {
-    'broker': os.environ.get('MQTT_CLOUD_BROKER', '7f5a2a82095f4558a5ce236d5cbb146d.s1.eu.hivemq.cloud'),
+    'broker': os.environ.get('MQTT_CLOUD_BROKER', None),  # Must be set via environment variable
     'port': int(os.environ.get('MQTT_CLOUD_PORT', '8883')),
-    'username': os.environ.get('MQTT_CLOUD_USER', 'wateradm'),
-    'password': os.environ.get('MQTT_CLOUD_PASS', 'CAwater2025!'),
+    'username': os.environ.get('MQTT_CLOUD_USER', None),  # Must be set via environment variable
+    'password': os.environ.get('MQTT_CLOUD_PASS', None),  # Must be set via environment variable
     'use_tls': True
 }
 
