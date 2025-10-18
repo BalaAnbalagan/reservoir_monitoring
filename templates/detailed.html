@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Detailed Analysis - California Reservoir Monitoring</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -111,6 +112,68 @@
             text-align: center;
             padding: 20px;
         }
+
+        .chart-section {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .chart-container h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .chart-container p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        .chart-wrapper.tall {
+            height: 500px;
+        }
+
+        .toggle-section {
+            margin: 20px 30px;
+            text-align: center;
+        }
+
+        .toggle-btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background: #2980b9;
+        }
+
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -122,9 +185,46 @@
 
         <nav>
             <a href="/">← Back to Summary</a>
+            <a href="/detailed/charts">📊 Interactive Charts</a>
             <a href="/api/historical" target="_blank">Download JSON</a>
         </nav>
 
+        <!-- Chart Visualizations Section -->
+        <div class="chart-section">
+            <div class="chart-container">
+                <h2>📊 Current Water Levels (Bar Chart)</h2>
+                <p>Latest water storage by reservoir - sorted by capacity</p>
+                <div class="chart-wrapper">
+                    <canvas id="currentLevelsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>📈 Stacked Water Levels Over Time</h2>
+                <p>Total water distribution across all reservoirs by day</p>
+                <div class="chart-wrapper tall">
+                    <canvas id="stackedChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <h2>📉 Water Level Changes</h2>
+                <p>Change from first to last day (green = gain, red = loss)</p>
+                <div class="chart-wrapper">
+                    <canvas id="changesChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toggle button for tables -->
+        <div class="toggle-section">
+            <button class="toggle-btn" onclick="toggleTables()">
+                <span id="toggleText">Show Detailed Tables</span>
+            </button>
+        </div>
+
+        <!-- Data Tables Section (initially hidden) -->
+        <div id="tablesSection" class="hidden">
         <div class="data-table">
             <h2>Complete Historical Data</h2>
             <table>
@@ -190,11 +290,198 @@
             </table>
         </div>
         {% endif %}
+        </div>
+        <!-- End of tables section -->
 
         <footer>
             <p><strong>California Department of Water Resources</strong></p>
             <p>Last Updated: {{ last_update }}</p>
         </footer>
     </div>
+
+    <script>
+        // Toggle tables visibility
+        function toggleTables() {
+            const tablesSection = document.getElementById('tablesSection');
+            const toggleText = document.getElementById('toggleText');
+
+            if (tablesSection.classList.contains('hidden')) {
+                tablesSection.classList.remove('hidden');
+                toggleText.textContent = 'Hide Detailed Tables';
+            } else {
+                tablesSection.classList.add('hidden');
+                toggleText.textContent = 'Show Detailed Tables';
+            }
+        }
+
+        // Chart data from Flask
+        const chartData = {{ chart_data | tojson }};
+
+        // Color palette
+        const colors = [
+            '#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6',
+            '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#16a085',
+            '#27ae60', '#2980b9', '#8e44ad', '#c0392b', '#d35400',
+            '#7f8c8d', '#bdc3c7', '#2c3e50'
+        ];
+
+        // Chart 1: Current Levels Bar Chart
+        const currentCtx = document.getElementById('currentLevelsChart').getContext('2d');
+        new Chart(currentCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.current.labels,
+                datasets: [{
+                    label: 'Water Level (TAF)',
+                    data: chartData.current.values,
+                    backgroundColor: colors.slice(0, chartData.current.labels.length),
+                    borderColor: colors.slice(0, chartData.current.labels.length),
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y.toLocaleString() + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Water Level (TAF)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Stacked Bar Chart
+        const stackedCtx = document.getElementById('stackedChart').getContext('2d');
+        const stackedDatasets = chartData.stacked.reservoirs.map((res, idx) => ({
+            label: res.name,
+            data: res.values,
+            backgroundColor: colors[idx % colors.length],
+            borderColor: colors[idx % colors.length],
+            borderWidth: 1
+        }));
+
+        new Chart(stackedCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.stacked.dates,
+                datasets: stackedDatasets
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: {
+                                size: 10
+                            }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y.toLocaleString() + ' TAF';
+                            },
+                            footer: function(tooltipItems) {
+                                let sum = 0;
+                                tooltipItems.forEach(item => sum += item.parsed.y);
+                                return 'Total: ' + sum.toLocaleString() + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'Total Water (TAF)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Changes Chart (Bar Chart with color coding)
+        const changesCtx = document.getElementById('changesChart').getContext('2d');
+        const changeColors = chartData.changes.values.map(v => v >= 0 ? '#27ae60' : '#e74c3c');
+
+        new Chart(changesCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.changes.labels,
+                datasets: [{
+                    label: 'Change (TAF)',
+                    data: chartData.changes.values,
+                    backgroundColor: changeColors,
+                    borderColor: changeColors,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                const val = context.parsed.y;
+                                return (val >= 0 ? '+' : '') + val.toLocaleString() + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Change (TAF)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

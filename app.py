@@ -169,10 +169,14 @@ def detailed():
     changes = calculate_changes(data)
     stats = get_summary_stats(data)
 
+    # Prepare chart data for visualizations
+    chart_data = prepare_chart_data(data)
+
     return render_template('detailed.html',
                          data=data,
                          changes=changes,
                          stats=stats,
+                         chart_data=chart_data,
                          last_update=datetime.now().strftime('%B %d, %Y at %I:%M %p'))
 
 
@@ -299,5 +303,11 @@ if __name__ == '__main__':
     templates_dir = BASE_DIR / 'templates'
     templates_dir.mkdir(exist_ok=True)
 
+    # Create reports directory if it doesn't exist
+    REPORTS_DIR.mkdir(exist_ok=True)
+
     # Run the app
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    # Use environment variable PORT for production (Render, Heroku, etc.)
+    port = int(os.environ.get('PORT', 5000))
+    debug = os.environ.get('FLASK_ENV') != 'production'
+    app.run(debug=debug, host='0.0.0.0', port=port)
