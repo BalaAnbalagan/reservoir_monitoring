@@ -12,10 +12,12 @@ This guide shows you how to deploy a **dynamic web dashboard** for your reservoi
 
 ✅ **Dynamic Dashboard** - Auto-refreshes every 5 minutes
 ✅ **Summary View** - Quick stats and charts
-✅ **Detailed View** - Full historical data with day-over-day changes
+✅ **Detailed View** - Full historical data with interactive bar/stacked bar charts
+✅ **Interactive Visualizations** - Chart.js powered charts with tooltips and animations
+✅ **Toggle Tables** - Show/hide detailed tables on demand
 ✅ **RESTful API** - JSON endpoints for data access
 ✅ **Responsive Design** - Works on mobile, tablet, desktop
-✅ **Free Hosting** - Deploy on Render, Railway, Fly.io, or PythonAnywhere
+✅ **Free Hosting** - Deploy on Render.com with auto-deploy from GitHub
 
 ---
 
@@ -41,7 +43,8 @@ http://localhost:5000
 
 You'll see:
 - Summary dashboard at `/`
-- Detailed view at `/detailed`
+- Detailed view with bar/stacked charts at `/detailed`
+- Advanced interactive charts at `/detailed/charts`
 - API endpoints at `/api/*`
 
 ---
@@ -153,7 +156,8 @@ Your deployed dashboard will have these endpoints:
 | Endpoint | Description | Example |
 |----------|-------------|---------|
 | `/` | Main dashboard | Summary view |
-| `/detailed` | Detailed analysis | Full data table |
+| `/detailed` | Detailed analysis with charts | Bar/stacked charts + tables |
+| `/detailed/charts` | Advanced interactive charts | Top 10, comparisons, etc. |
 | `/api/summary` | Summary stats (JSON) | `{"total_water": 2636.8, ...}` |
 | `/api/latest` | Latest day data (JSON) | Today's readings |
 | `/api/historical` | All historical data (JSON) | Complete dataset |
@@ -251,9 +255,12 @@ reservoir_monitoring/
 ├── app.py                    # Flask application
 ├── requirements.txt          # Python dependencies
 ├── Procfile                  # Render/Heroku config
+├── render.yaml              # Render.com configuration
 ├── runtime.txt              # Python version
 ├── templates/
-│   └── index.html           # Dashboard template
+│   ├── index.html           # Summary dashboard
+│   ├── detailed.html        # Detailed view with charts
+│   └── detailed_charts.html # Advanced charts
 ├── reports/
 │   ├── comprehensive_report_*.json
 │   └── visualizations/

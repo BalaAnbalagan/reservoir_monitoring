@@ -9,7 +9,9 @@ A real-time water level monitoring system for California reservoirs using MQTT p
 - **Single Subscriber** - Collects data from all reservoirs using wildcard subscriptions
 - **Multiple Publishers** - CSV-based (for testing) and API-based (for live data)
 - **Comprehensive Reports** - JSON (machine-readable) and TXT (human-readable) formats
-- **Data Visualization** - Generates charts and interactive HTML dashboards
+- **Interactive Web Dashboard** - Flask-powered web interface with real-time visualizations
+- **Advanced Chart Visualizations** - Bar charts, stacked bar charts, and time-series analysis using Chart.js
+- **Cloud Deployment Ready** - Configured for Render.com with auto-deploy from GitHub
 - **Scalable Architecture** - Easy to add new reservoirs or data sources
 
 ## Table of Contents
@@ -19,6 +21,8 @@ A real-time water level monitoring system for California reservoirs using MQTT p
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Web Dashboard](#web-dashboard)
+- [Deployment to Render.com](#deployment-to-rendercom)
 - [Project Structure](#project-structure)
 - [Key Concepts](#key-concepts)
 - [Real-World Applications](#real-world-applications)
@@ -232,6 +236,102 @@ python publisher.py --reservoir ALL --port 1884
 
 ---
 
+## Web Dashboard
+
+The project includes a Flask-powered web dashboard for visualizing reservoir data in real-time.
+
+### Starting the Web Dashboard
+
+```bash
+python app.py
+```
+
+The dashboard will be available at: `http://localhost:5000`
+
+### Dashboard Features
+
+#### 1. Summary View (`/`)
+- Overview of total water storage
+- Period changes and statistics
+- Number of active reservoirs
+- Quick summary cards
+
+#### 2. Detailed View (`/detailed`)
+- **Interactive Bar Charts** - Current water levels by reservoir
+- **Stacked Bar Charts** - Water distribution over time across all reservoirs
+- **Change Analysis** - Visual representation of water level changes (green=gain, red=loss)
+- **Toggleable Tables** - Detailed historical data tables (hidden by default)
+- Complete day-over-day change analysis
+
+#### 3. Advanced Charts View (`/detailed/charts`)
+- Top 10 largest reservoirs (horizontal bar chart)
+- Multi-day comparison with interactive controls
+- Weekly comparison view
+- First vs Last day analysis
+
+#### 4. API Endpoints
+- `/api/summary` - Summary statistics (JSON)
+- `/api/latest` - Latest day data (JSON)
+- `/api/historical` - Complete historical data (JSON)
+- `/api/changes` - Day-over-day changes (JSON)
+- `/api/reservoir/<name>` - Specific reservoir data (JSON)
+
+### Technologies Used
+- **Flask** - Web framework
+- **Chart.js** - Interactive charts and visualizations
+- **Gunicorn** - Production WSGI server
+- **Bootstrap styling** - Responsive design
+
+---
+
+## Deployment to Render.com
+
+This project is configured for easy deployment to Render.com's free tier.
+
+### Prerequisites
+- GitHub account
+- Render.com account (sign up at https://render.com)
+- Code pushed to GitHub repository
+
+### Deployment Steps
+
+#### 1. Connect to Render.com
+1. Go to https://render.com and sign in
+2. Click **"New +"** → **"Web Service"**
+3. Connect your GitHub account
+4. Select the `reservoir_monitoring` repository
+
+#### 2. Configure Service
+Render will auto-detect settings from `render.yaml`:
+- **Name**: `reservoir-monitoring`
+- **Environment**: Python 3
+- **Build Command**: `pip install -r requirements.txt`
+- **Start Command**: `gunicorn app:app`
+- **Instance Type**: Free
+
+#### 3. Deploy
+Click **"Create Web Service"** and wait for deployment (5-10 minutes)
+
+#### 4. Access Your Live App
+Your app will be available at: `https://your-app-name.onrender.com`
+
+### Auto-Deploy from GitHub
+- Every push to the `main` branch triggers automatic deployment
+- No manual intervention needed
+- View build logs in Render dashboard
+
+### Free Tier Limitations
+- App spins down after 15 minutes of inactivity
+- ~30 seconds to wake up on first request
+- 750 hours/month free
+
+### Environment Variables (Optional)
+Add in Render dashboard if needed:
+- `FLASK_ENV`: `production`
+- `PYTHON_VERSION`: `3.11.0`
+
+---
+
 ## Project Structure
 
 ```
@@ -245,14 +345,30 @@ reservoir_monitoring/
 │   ├── OROVILLE_WML.json
 │   └── SONOMA_WML.json
 │
+├── templates/                      # Flask HTML templates
+│   ├── index.html                 # Summary dashboard
+│   ├── detailed.html              # Detailed view with charts
+│   └── detailed_charts.html       # Advanced interactive charts
+│
 ├── reports/                        # Generated reports
 │   ├── comprehensive_report_*.json # Detailed JSON reports
-│   └── summary_report_*.txt        # Human-readable summaries
+│   ├── summary_report_*.txt        # Human-readable summaries
+│   └── visualizations/             # Generated chart images
 │
-├── csv_to_json.py                  # CSV to JSON converter
-├── publisher.py                    # MQTT publisher (sensor simulator)
+├── app.py                          # Flask web application
+├── api_publisher.py                # Live API data publisher
+├── publisher.py                    # MQTT publisher (CSV-based)
 ├── subscriber.py                   # MQTT subscriber (data collector)
+├── csv_to_json.py                  # CSV to JSON converter
+├── visualize.py                    # Chart generation utilities
+├── generate_dashboard.py           # Dashboard generation
+│
 ├── requirements.txt                # Python dependencies
+├── runtime.txt                     # Python version for deployment
+├── Procfile                        # Process file for Heroku/Render
+├── render.yaml                     # Render.com configuration
+├── .gitignore                      # Git ignore rules
+│
 └── README.md                       # This file
 ```
 
@@ -434,18 +550,24 @@ This project fulfills the following requirements:
 - [x] Single subscriber generating daily reports
 - [x] TAF (Thousand Acre-Feet) measurements
 - [x] Aggregated data from multiple reservoirs
+- [x] Web dashboard with interactive visualizations
+- [x] Cloud deployment configuration (Render.com)
 
 ---
 
 ## Future Enhancements
 
 Possible improvements:
-- Add database storage (MongoDB, PostgreSQL)
-- Create web dashboard for real-time visualization
+- Add database storage (MongoDB, PostgreSQL) for historical data
 - Add email/SMS alerts for critical water levels
+- Implement user authentication and authorization
+- Add real-time WebSocket updates for live dashboard
 - Implement data persistence for offline scenarios
 - Add authentication and encryption (MQTT with TLS)
-- Deploy to cloud (AWS IoT, Azure IoT Hub)
+- Add predictive analytics and forecasting
+- Integrate with weather API for correlation analysis
+- Deploy to additional cloud platforms (AWS IoT, Azure IoT Hub)
+- Mobile app development (React Native/Flutter)
 
 ---
 
