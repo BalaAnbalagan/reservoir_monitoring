@@ -1086,3 +1086,4 @@ For questions, issues, or feedback about this project, please contact via email 
 
 **Built with Python, MQTT, Flask, and Cloud Services**
 **Powered by:** HiveMQ Cloud, MongoDB Atlas, Render.com, and GitHub Actions
+
