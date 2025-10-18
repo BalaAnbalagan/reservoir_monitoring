@@ -1,0 +1,684 @@
+================================================================================
+CALIFORNIA DEPARTMENT OF WATER RESOURCES
+RESERVOIR WATER MARK LEVEL DAILY SUMMARY REPORT
+================================================================================
+
+Report Generated: 2025-10-18 01:44:29
+Total Messages Collected: 104
+Reporting Period: 7 days
+
+================================================================================
+
+DATE: 10/11/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2636.80 TAF
+    Minimum Water Level:    2636.80 TAF
+    Maximum Water Level:    2636.80 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1914.96 TAF
+    Minimum Water Level:    1914.96 TAF
+    Maximum Water Level:    1914.96 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1620.20 TAF
+    Minimum Water Level:    1620.20 TAF
+    Maximum Water Level:    1620.20 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1550.78 TAF
+    Minimum Water Level:    1550.78 TAF
+    Maximum Water Level:    1550.78 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     621.37 TAF
+    Minimum Water Level:     621.37 TAF
+    Maximum Water Level:     621.37 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     439.34 TAF
+    Minimum Water Level:     439.34 TAF
+    Maximum Water Level:     439.34 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.77 TAF
+    Minimum Water Level:      63.77 TAF
+    Maximum Water Level:      63.77 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.72 TAF
+    Minimum Water Level:     148.72 TAF
+    Maximum Water Level:     148.72 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     271.56 TAF
+    Minimum Water Level:     271.56 TAF
+    Maximum Water Level:     271.56 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     768.04 TAF
+    Minimum Water Level:     768.04 TAF
+    Maximum Water Level:     768.04 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     247.66 TAF
+    Minimum Water Level:     247.66 TAF
+    Maximum Water Level:     247.66 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     239.73 TAF
+    Minimum Water Level:     239.73 TAF
+    Maximum Water Level:     239.73 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1356.30 TAF
+    Minimum Water Level:    1356.30 TAF
+    Maximum Water Level:    1356.30 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     306.73 TAF
+    Minimum Water Level:     306.73 TAF
+    Maximum Water Level:     306.73 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     212.04 TAF
+    Minimum Water Level:     212.04 TAF
+    Maximum Water Level:     212.04 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.19 TAF
+    Minimum Water Level:     124.19 TAF
+    Maximum Water Level:     124.19 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12522.19 TAF
+
+================================================================================
+
+DATE: 10/12/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2629.67 TAF
+    Minimum Water Level:    2629.67 TAF
+    Maximum Water Level:    2629.67 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1902.23 TAF
+    Minimum Water Level:    1902.23 TAF
+    Maximum Water Level:    1902.23 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1620.20 TAF
+    Minimum Water Level:    1620.20 TAF
+    Maximum Water Level:    1620.20 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1548.67 TAF
+    Minimum Water Level:    1548.67 TAF
+    Maximum Water Level:    1548.67 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     619.87 TAF
+    Minimum Water Level:     619.87 TAF
+    Maximum Water Level:     619.87 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     438.16 TAF
+    Minimum Water Level:     438.16 TAF
+    Maximum Water Level:     438.16 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.20 TAF
+    Minimum Water Level:      63.20 TAF
+    Maximum Water Level:      63.20 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.62 TAF
+    Minimum Water Level:     148.62 TAF
+    Maximum Water Level:     148.62 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     269.95 TAF
+    Minimum Water Level:     269.95 TAF
+    Maximum Water Level:     269.95 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     767.85 TAF
+    Minimum Water Level:     767.85 TAF
+    Maximum Water Level:     767.85 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     247.31 TAF
+    Minimum Water Level:     247.31 TAF
+    Maximum Water Level:     247.31 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     240.70 TAF
+    Minimum Water Level:     240.70 TAF
+    Maximum Water Level:     240.70 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1355.76 TAF
+    Minimum Water Level:    1355.76 TAF
+    Maximum Water Level:    1355.76 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     306.09 TAF
+    Minimum Water Level:     306.09 TAF
+    Maximum Water Level:     306.09 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     211.29 TAF
+    Minimum Water Level:     211.29 TAF
+    Maximum Water Level:     211.29 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.26 TAF
+    Minimum Water Level:     124.26 TAF
+    Maximum Water Level:     124.26 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12493.83 TAF
+
+================================================================================
+
+DATE: 10/13/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2626.40 TAF
+    Minimum Water Level:    2626.40 TAF
+    Maximum Water Level:    2626.40 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1899.13 TAF
+    Minimum Water Level:    1899.13 TAF
+    Maximum Water Level:    1899.13 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1618.55 TAF
+    Minimum Water Level:    1618.55 TAF
+    Maximum Water Level:    1618.55 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1547.62 TAF
+    Minimum Water Level:    1547.62 TAF
+    Maximum Water Level:    1547.62 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     619.24 TAF
+    Minimum Water Level:     619.24 TAF
+    Maximum Water Level:     619.24 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.29 TAF
+    Minimum Water Level:     437.29 TAF
+    Maximum Water Level:     437.29 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.16 TAF
+    Minimum Water Level:      63.16 TAF
+    Maximum Water Level:      63.16 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.47 TAF
+    Minimum Water Level:     148.47 TAF
+    Maximum Water Level:     148.47 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     268.42 TAF
+    Minimum Water Level:     268.42 TAF
+    Maximum Water Level:     268.42 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     767.65 TAF
+    Minimum Water Level:     767.65 TAF
+    Maximum Water Level:     767.65 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     248.42 TAF
+    Minimum Water Level:     248.42 TAF
+    Maximum Water Level:     248.42 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     241.51 TAF
+    Minimum Water Level:     241.51 TAF
+    Maximum Water Level:     241.51 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1355.75 TAF
+    Minimum Water Level:    1355.75 TAF
+    Maximum Water Level:    1355.75 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     305.83 TAF
+    Minimum Water Level:     305.83 TAF
+    Maximum Water Level:     305.83 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     210.54 TAF
+    Minimum Water Level:     210.54 TAF
+    Maximum Water Level:     210.54 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.42 TAF
+    Minimum Water Level:     124.42 TAF
+    Maximum Water Level:     124.42 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12482.40 TAF
+
+================================================================================
+
+DATE: 10/14/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2623.22 TAF
+    Minimum Water Level:    2623.22 TAF
+    Maximum Water Level:    2623.22 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1896.66 TAF
+    Minimum Water Level:    1896.66 TAF
+    Maximum Water Level:    1896.66 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1620.20 TAF
+    Minimum Water Level:    1620.20 TAF
+    Maximum Water Level:    1620.20 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1546.57 TAF
+    Minimum Water Level:    1546.57 TAF
+    Maximum Water Level:    1546.57 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     618.86 TAF
+    Minimum Water Level:     618.86 TAF
+    Maximum Water Level:     618.86 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.58 TAF
+    Minimum Water Level:     437.58 TAF
+    Maximum Water Level:     437.58 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.19 TAF
+    Minimum Water Level:      63.19 TAF
+    Maximum Water Level:      63.19 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.75 TAF
+    Minimum Water Level:     148.75 TAF
+    Maximum Water Level:     148.75 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     270.47 TAF
+    Minimum Water Level:     270.47 TAF
+    Maximum Water Level:     270.47 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     767.75 TAF
+    Minimum Water Level:     767.75 TAF
+    Maximum Water Level:     767.75 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     249.86 TAF
+    Minimum Water Level:     249.86 TAF
+    Maximum Water Level:     249.86 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     243.38 TAF
+    Minimum Water Level:     243.38 TAF
+    Maximum Water Level:     243.38 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1356.11 TAF
+    Minimum Water Level:    1356.11 TAF
+    Maximum Water Level:    1356.11 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     306.09 TAF
+    Minimum Water Level:     306.09 TAF
+    Maximum Water Level:     306.09 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     210.67 TAF
+    Minimum Water Level:     210.67 TAF
+    Maximum Water Level:     210.67 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.56 TAF
+    Minimum Water Level:     124.56 TAF
+    Maximum Water Level:     124.56 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12483.92 TAF
+
+================================================================================
+
+DATE: 10/15/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2618.94 TAF
+    Minimum Water Level:    2618.94 TAF
+    Maximum Water Level:    2618.94 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1891.20 TAF
+    Minimum Water Level:    1891.20 TAF
+    Maximum Water Level:    1891.20 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1618.65 TAF
+    Minimum Water Level:    1618.65 TAF
+    Maximum Water Level:    1618.65 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1543.41 TAF
+    Minimum Water Level:    1543.41 TAF
+    Maximum Water Level:    1543.41 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     617.61 TAF
+    Minimum Water Level:     617.61 TAF
+    Maximum Water Level:     617.61 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.07 TAF
+    Minimum Water Level:     437.07 TAF
+    Maximum Water Level:     437.07 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.23 TAF
+    Minimum Water Level:      63.23 TAF
+    Maximum Water Level:      63.23 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.72 TAF
+    Minimum Water Level:     148.72 TAF
+    Maximum Water Level:     148.72 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     274.49 TAF
+    Minimum Water Level:     274.49 TAF
+    Maximum Water Level:     274.49 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     767.61 TAF
+    Minimum Water Level:     767.61 TAF
+    Maximum Water Level:     767.61 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     251.83 TAF
+    Minimum Water Level:     251.83 TAF
+    Maximum Water Level:     251.83 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     244.89 TAF
+    Minimum Water Level:     244.89 TAF
+    Maximum Water Level:     244.89 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1355.93 TAF
+    Minimum Water Level:    1355.93 TAF
+    Maximum Water Level:    1355.93 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     306.35 TAF
+    Minimum Water Level:     306.35 TAF
+    Maximum Water Level:     306.35 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     210.20 TAF
+    Minimum Water Level:     210.20 TAF
+    Maximum Water Level:     210.20 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.72 TAF
+    Minimum Water Level:     124.72 TAF
+    Maximum Water Level:     124.72 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12474.85 TAF
+
+================================================================================
+
+DATE: 10/16/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2613.13 TAF
+    Minimum Water Level:    2613.13 TAF
+    Maximum Water Level:    2613.13 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1886.27 TAF
+    Minimum Water Level:    1886.27 TAF
+    Maximum Water Level:    1886.27 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1619.91 TAF
+    Minimum Water Level:    1619.91 TAF
+    Maximum Water Level:    1619.91 TAF
+    Number of Readings:           1
+
+  DON_PEDRO RESERVOIR:
+    Average Water Level:    1542.37 TAF
+    Minimum Water Level:    1542.37 TAF
+    Maximum Water Level:    1542.37 TAF
+    Number of Readings:           1
+
+  EXCHEQUER RESERVOIR:
+    Average Water Level:     615.78 TAF
+    Minimum Water Level:     615.78 TAF
+    Maximum Water Level:     615.78 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     436.11 TAF
+    Minimum Water Level:     436.11 TAF
+    Maximum Water Level:     436.11 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.26 TAF
+    Minimum Water Level:      63.26 TAF
+    Maximum Water Level:      63.26 TAF
+    Number of Readings:           1
+
+  CACHUMA RESERVOIR:
+    Average Water Level:     148.62 TAF
+    Minimum Water Level:     148.62 TAF
+    Maximum Water Level:     148.62 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     276.40 TAF
+    Minimum Water Level:     276.40 TAF
+    Maximum Water Level:     276.40 TAF
+    Number of Readings:           1
+
+  DIAMOND_VALLEY RESERVOIR:
+    Average Water Level:     767.56 TAF
+    Minimum Water Level:     767.56 TAF
+    Maximum Water Level:     767.56 TAF
+    Number of Readings:           1
+
+  MILLERTON RESERVOIR:
+    Average Water Level:     252.99 TAF
+    Minimum Water Level:     252.99 TAF
+    Maximum Water Level:     252.99 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     246.26 TAF
+    Minimum Water Level:     246.26 TAF
+    Maximum Water Level:     246.26 TAF
+    Number of Readings:           1
+
+  BERRYESSA RESERVOIR:
+    Average Water Level:    1355.04 TAF
+    Minimum Water Level:    1355.04 TAF
+    Maximum Water Level:    1355.04 TAF
+    Number of Readings:           1
+
+  CAMANCHE RESERVOIR:
+    Average Water Level:     306.60 TAF
+    Minimum Water Level:     306.60 TAF
+    Maximum Water Level:     306.60 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     209.38 TAF
+    Minimum Water Level:     209.38 TAF
+    Maximum Water Level:     209.38 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.69 TAF
+    Minimum Water Level:     124.69 TAF
+    Maximum Water Level:     124.69 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):   12464.37 TAF
+
+================================================================================
+
+DATE: 10/17/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2608.60 TAF
+    Minimum Water Level:    2608.60 TAF
+    Maximum Water Level:    2608.60 TAF
+    Number of Readings:           1
+
+  NEW_MELONES RESERVOIR:
+    Average Water Level:    1619.82 TAF
+    Minimum Water Level:    1619.82 TAF
+    Maximum Water Level:    1619.82 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     435.09 TAF
+    Minimum Water Level:     435.09 TAF
+    Maximum Water Level:     435.09 TAF
+    Number of Readings:           1
+
+  SAN_LUIS RESERVOIR:
+    Average Water Level:      63.14 TAF
+    Minimum Water Level:      63.14 TAF
+    Maximum Water Level:      63.14 TAF
+    Number of Readings:           1
+
+  CASTAIC RESERVOIR:
+    Average Water Level:     279.69 TAF
+    Minimum Water Level:     279.69 TAF
+    Maximum Water Level:     279.69 TAF
+    Number of Readings:           1
+
+  PINE_FLAT RESERVOIR:
+    Average Water Level:     247.73 TAF
+    Minimum Water Level:     247.73 TAF
+    Maximum Water Level:     247.73 TAF
+    Number of Readings:           1
+
+  ISABELLA RESERVOIR:
+    Average Water Level:     208.90 TAF
+    Minimum Water Level:     208.90 TAF
+    Maximum Water Level:     208.90 TAF
+    Number of Readings:           1
+
+  PERRIS RESERVOIR:
+    Average Water Level:     124.85 TAF
+    Minimum Water Level:     124.85 TAF
+    Maximum Water Level:     124.85 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    5587.82 TAF
+
+================================================================================
+

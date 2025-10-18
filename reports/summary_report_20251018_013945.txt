@@ -1,0 +1,180 @@
+================================================================================
+CALIFORNIA DEPARTMENT OF WATER RESOURCES
+RESERVOIR WATER MARK LEVEL DAILY SUMMARY REPORT
+================================================================================
+
+Report Generated: 2025-10-18 01:39:45
+Total Messages Collected: 20
+Reporting Period: 7 days
+
+================================================================================
+
+DATE: 10/11/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2636.80 TAF
+    Minimum Water Level:    2636.80 TAF
+    Maximum Water Level:    2636.80 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1914.96 TAF
+    Minimum Water Level:    1914.96 TAF
+    Maximum Water Level:    1914.96 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     439.34 TAF
+    Minimum Water Level:     439.34 TAF
+    Maximum Water Level:     439.34 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4991.10 TAF
+
+================================================================================
+
+DATE: 10/12/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2629.67 TAF
+    Minimum Water Level:    2629.67 TAF
+    Maximum Water Level:    2629.67 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1902.23 TAF
+    Minimum Water Level:    1902.23 TAF
+    Maximum Water Level:    1902.23 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     438.16 TAF
+    Minimum Water Level:     438.16 TAF
+    Maximum Water Level:     438.16 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4970.06 TAF
+
+================================================================================
+
+DATE: 10/13/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2626.40 TAF
+    Minimum Water Level:    2626.40 TAF
+    Maximum Water Level:    2626.40 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1899.13 TAF
+    Minimum Water Level:    1899.13 TAF
+    Maximum Water Level:    1899.13 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.29 TAF
+    Minimum Water Level:     437.29 TAF
+    Maximum Water Level:     437.29 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4962.82 TAF
+
+================================================================================
+
+DATE: 10/14/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2623.22 TAF
+    Minimum Water Level:    2623.22 TAF
+    Maximum Water Level:    2623.22 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1896.66 TAF
+    Minimum Water Level:    1896.66 TAF
+    Maximum Water Level:    1896.66 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.58 TAF
+    Minimum Water Level:     437.58 TAF
+    Maximum Water Level:     437.58 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4957.46 TAF
+
+================================================================================
+
+DATE: 10/15/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2618.94 TAF
+    Minimum Water Level:    2618.94 TAF
+    Maximum Water Level:    2618.94 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1891.20 TAF
+    Minimum Water Level:    1891.20 TAF
+    Maximum Water Level:    1891.20 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     437.07 TAF
+    Minimum Water Level:     437.07 TAF
+    Maximum Water Level:     437.07 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4947.21 TAF
+
+================================================================================
+
+DATE: 10/16/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2613.13 TAF
+    Minimum Water Level:    2613.13 TAF
+    Maximum Water Level:    2613.13 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1886.27 TAF
+    Minimum Water Level:    1886.27 TAF
+    Maximum Water Level:    1886.27 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     436.11 TAF
+    Minimum Water Level:     436.11 TAF
+    Maximum Water Level:     436.11 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4935.51 TAF
+
+================================================================================
+
+DATE: 10/17/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2608.60 TAF
+    Minimum Water Level:    2608.60 TAF
+    Maximum Water Level:    2608.60 TAF
+    Number of Readings:           1
+
+  FOLSOM RESERVOIR:
+    Average Water Level:     435.09 TAF
+    Minimum Water Level:     435.09 TAF
+    Maximum Water Level:     435.09 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    3043.69 TAF
+
+================================================================================
+

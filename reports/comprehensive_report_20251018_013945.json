@@ -1,0 +1,391 @@
+[
+  {
+    "date": "10/11/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2636.8,
+        "min_water_level_taf": 2636.8,
+        "max_water_level_taf": 2636.8,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/11/2025",
+            "water_level_taf": 2636.8,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:38:33.426259",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1914.96,
+        "min_water_level_taf": 1914.96,
+        "max_water_level_taf": 1914.96,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/11/2025",
+            "water_level_taf": 1914.96,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:38:37.581595",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 439.34,
+        "min_water_level_taf": 439.34,
+        "max_water_level_taf": 439.34,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/11/2025",
+            "water_level_taf": 439.34,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:38:41.145274",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4991.1,
+    "report_generated_at": "2025-10-18T01:39:45.327565"
+  },
+  {
+    "date": "10/12/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2629.67,
+        "min_water_level_taf": 2629.67,
+        "max_water_level_taf": 2629.67,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/12/2025",
+            "water_level_taf": 2629.67,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:38:33.926954",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1902.23,
+        "min_water_level_taf": 1902.23,
+        "max_water_level_taf": 1902.23,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/12/2025",
+            "water_level_taf": 1902.23,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:38:38.081848",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 438.16,
+        "min_water_level_taf": 438.16,
+        "max_water_level_taf": 438.16,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/12/2025",
+            "water_level_taf": 438.16,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:38:41.646053",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4970.06,
+    "report_generated_at": "2025-10-18T01:39:45.327771"
+  },
+  {
+    "date": "10/13/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2626.4,
+        "min_water_level_taf": 2626.4,
+        "max_water_level_taf": 2626.4,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/13/2025",
+            "water_level_taf": 2626.4,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:38:34.427735",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1899.13,
+        "min_water_level_taf": 1899.13,
+        "max_water_level_taf": 1899.13,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/13/2025",
+            "water_level_taf": 1899.13,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:38:38.582489",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.29,
+        "min_water_level_taf": 437.29,
+        "max_water_level_taf": 437.29,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/13/2025",
+            "water_level_taf": 437.29,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:38:42.146467",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4962.82,
+    "report_generated_at": "2025-10-18T01:39:45.327821"
+  },
+  {
+    "date": "10/14/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2623.22,
+        "min_water_level_taf": 2623.22,
+        "max_water_level_taf": 2623.22,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/14/2025",
+            "water_level_taf": 2623.22,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:38:34.928080",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1896.66,
+        "min_water_level_taf": 1896.66,
+        "max_water_level_taf": 1896.66,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/14/2025",
+            "water_level_taf": 1896.66,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:38:39.083453",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.58,
+        "min_water_level_taf": 437.58,
+        "max_water_level_taf": 437.58,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/14/2025",
+            "water_level_taf": 437.58,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:38:42.647628",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4957.46,
+    "report_generated_at": "2025-10-18T01:39:45.327868"
+  },
+  {
+    "date": "10/15/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2618.94,
+        "min_water_level_taf": 2618.94,
+        "max_water_level_taf": 2618.94,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/15/2025",
+            "water_level_taf": 2618.94,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:38:35.428660",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1891.2,
+        "min_water_level_taf": 1891.2,
+        "max_water_level_taf": 1891.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/15/2025",
+            "water_level_taf": 1891.2,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:38:39.584452",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.07,
+        "min_water_level_taf": 437.07,
+        "max_water_level_taf": 437.07,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/15/2025",
+            "water_level_taf": 437.07,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:38:43.148101",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4947.21,
+    "report_generated_at": "2025-10-18T01:39:45.327919"
+  },
+  {
+    "date": "10/16/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2613.13,
+        "min_water_level_taf": 2613.13,
+        "max_water_level_taf": 2613.13,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/16/2025",
+            "water_level_taf": 2613.13,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:38:35.929381",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1886.27,
+        "min_water_level_taf": 1886.27,
+        "max_water_level_taf": 1886.27,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/16/2025",
+            "water_level_taf": 1886.27,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:38:40.085450",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 436.11,
+        "min_water_level_taf": 436.11,
+        "max_water_level_taf": 436.11,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/16/2025",
+            "water_level_taf": 436.11,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:38:43.649074",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4935.51,
+    "report_generated_at": "2025-10-18T01:39:45.327963"
+  },
+  {
+    "date": "10/17/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2608.6,
+        "min_water_level_taf": 2608.6,
+        "max_water_level_taf": 2608.6,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/17/2025",
+            "water_level_taf": 2608.6,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:38:36.429767",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 435.09,
+        "min_water_level_taf": 435.09,
+        "max_water_level_taf": 435.09,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/17/2025",
+            "water_level_taf": 435.09,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:38:44.149617",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 3043.69,
+    "report_generated_at": "2025-10-18T01:39:45.328007"
+  }
+]

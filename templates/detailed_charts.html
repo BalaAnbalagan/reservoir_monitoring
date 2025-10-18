@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Analysis - Interactive Charts</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #ecf0f1;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        nav a:hover {
+            background: #3498db;
+            color: white;
+        }
+
+        .chart-section {
+            padding: 30px;
+        }
+
+        .chart-container {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .chart-container h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+            margin-top: 20px;
+        }
+
+        .chart-wrapper.tall {
+            height: 600px;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .controls button {
+            padding: 10px 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s;
+        }
+
+        .controls button:hover {
+            background: #2980b9;
+        }
+
+        .controls button.active {
+            background: #27ae60;
+        }
+
+        .stats-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .stat-card h3 {
+            font-size: 0.9em;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .value {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .legend-custom {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 15px;
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📊 Interactive Reservoir Analysis</h1>
+            <p>Detailed Charts & Visualizations</p>
+        </header>
+
+        <nav>
+            <div>
+                <a href="/">← Summary Dashboard</a>
+                <a href="/detailed">📋 Table View</a>
+                <a href="/detailed/charts" style="background: #3498db; color: white;">📊 Charts View</a>
+            </div>
+            <div>
+                <a href="/api/historical" target="_blank">Download JSON</a>
+            </div>
+        </nav>
+
+        <div class="chart-section">
+            <div class="stats-cards">
+                <div class="stat-card">
+                    <h3>Active Reservoirs</h3>
+                    <div class="value">{{ stats.num_reservoirs }}</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Total Water</h3>
+                    <div class="value">{{ "{:,.0f}".format(stats.total_water) }} TAF</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Period Change</h3>
+                    <div class="value">{{ "{:+,.1f}".format(stats.period_change) }} TAF</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Reporting Period</h3>
+                    <div class="value">{{ stats.num_days }} Days</div>
+                </div>
+            </div>
+
+            <!-- Current Levels Bar Chart -->
+            <div class="chart-container">
+                <h2>📊 Current Water Levels by Reservoir</h2>
+                <p style="color: #7f8c8d; margin-bottom: 15px;">
+                    Compare water storage across all active reservoirs (latest day)
+                </p>
+                <div class="chart-wrapper">
+                    <canvas id="currentLevelsChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Stacked Bar Chart - Water Levels Over Time -->
+            <div class="chart-container">
+                <h2>📈 Stacked Water Levels Over Time</h2>
+                <p style="color: #7f8c8d; margin-bottom: 15px;">
+                    Total water distribution across all reservoirs by day
+                </p>
+                <div class="chart-wrapper tall">
+                    <canvas id="stackedChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Horizontal Bar - Top 10 Reservoirs -->
+            <div class="chart-container">
+                <h2>🏆 Top 10 Largest Reservoirs</h2>
+                <p style="color: #7f8c8d; margin-bottom: 15px;">
+                    Ranked by current water storage capacity
+                </p>
+                <div class="chart-wrapper">
+                    <canvas id="top10Chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Change Chart - Period Changes -->
+            <div class="chart-container">
+                <h2>📉 Water Level Changes Over Period</h2>
+                <p style="color: #7f8c8d; margin-bottom: 15px;">
+                    Change from first to last day (positive = gain, negative = loss)
+                </p>
+                <div class="chart-wrapper">
+                    <canvas id="changesChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Grouped Bar Chart - Compare Specific Days -->
+            <div class="chart-container">
+                <h2>📅 Multi-Day Comparison</h2>
+                <p style="color: #7f8c8d; margin-bottom: 15px;">
+                    Compare water levels across different dates
+                </p>
+                <div class="controls">
+                    <button onclick="showAllDays()">Show All Days</button>
+                    <button onclick="showFirstLast()">First vs Last</button>
+                    <button onclick="showWeekly()">Weekly Comparison</button>
+                </div>
+                <div class="chart-wrapper tall">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>California Department of Water Resources</strong></p>
+            <p>Last Updated: {{ last_update }}</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Interactive charts powered by Chart.js</p>
+        </footer>
+    </div>
+
+    <script>
+        // Data from Flask
+        const chartData = {{ chart_data | tojson }};
+
+        // Color palette for reservoirs
+        const colors = [
+            '#3498db', '#e74c3c', '#2ecc71', '#f39c12', '#9b59b6',
+            '#1abc9c', '#34495e', '#e67e22', '#95a5a6', '#16a085',
+            '#27ae60', '#2980b9', '#8e44ad', '#c0392b', '#d35400',
+            '#7f8c8d', '#bdc3c7', '#2c3e50'
+        ];
+
+        // Chart 1: Current Levels (Vertical Bar)
+        const currentCtx = document.getElementById('currentLevelsChart').getContext('2d');
+        new Chart(currentCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.current.labels,
+                datasets: [{
+                    label: 'Water Level (TAF)',
+                    data: chartData.current.values,
+                    backgroundColor: colors.slice(0, chartData.current.labels.length),
+                    borderColor: colors.slice(0, chartData.current.labels.length),
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return context.parsed.y.toFixed(2) + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Water Level (TAF)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 2: Stacked Bar Chart
+        const stackedCtx = document.getElementById('stackedChart').getContext('2d');
+        const stackedDatasets = chartData.stacked.reservoirs.map((res, idx) => ({
+            label: res.name,
+            data: res.values,
+            backgroundColor: colors[idx % colors.length],
+            borderColor: colors[idx % colors.length],
+            borderWidth: 1
+        }));
+
+        new Chart(stackedCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.stacked.dates,
+                datasets: stackedDatasets
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            boxWidth: 12,
+                            font: {
+                                size: 10
+                            }
+                        }
+                    },
+                    tooltip: {
+                        mode: 'index',
+                        callbacks: {
+                            label: function(context) {
+                                return context.dataset.label + ': ' + context.parsed.y.toFixed(2) + ' TAF';
+                            },
+                            footer: function(tooltipItems) {
+                                let sum = 0;
+                                tooltipItems.forEach(item => sum += item.parsed.y);
+                                return 'Total: ' + sum.toFixed(2) + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        stacked: true,
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    },
+                    y: {
+                        stacked: true,
+                        title: {
+                            display: true,
+                            text: 'Total Water (TAF)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 3: Top 10 Horizontal Bar
+        const top10Ctx = document.getElementById('top10Chart').getContext('2d');
+        new Chart(top10Ctx, {
+            type: 'bar',
+            data: {
+                labels: chartData.top10.labels,
+                datasets: [{
+                    label: 'Water Level (TAF)',
+                    data: chartData.top10.values,
+                    backgroundColor: colors.slice(0, 10),
+                    borderColor: colors.slice(0, 10),
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Water Level (TAF)'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 4: Changes Chart
+        const changesCtx = document.getElementById('changesChart').getContext('2d');
+        const changeColors = chartData.changes.values.map(v => v >= 0 ? '#27ae60' : '#e74c3c');
+
+        new Chart(changesCtx, {
+            type: 'bar',
+            data: {
+                labels: chartData.changes.labels,
+                datasets: [{
+                    label: 'Change (TAF)',
+                    data: chartData.changes.values,
+                    backgroundColor: changeColors,
+                    borderColor: changeColors,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        display: false
+                    },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return (context.parsed.y >= 0 ? '+' : '') + context.parsed.y.toFixed(2) + ' TAF';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    y: {
+                        title: {
+                            display: true,
+                            text: 'Change (TAF)'
+                        }
+                    },
+                    x: {
+                        ticks: {
+                            maxRotation: 45,
+                            minRotation: 45
+                        }
+                    }
+                }
+            }
+        });
+
+        // Chart 5: Comparison Chart (Grouped Bars)
+        let comparisonChart;
+        const comparisonCtx = document.getElementById('comparisonChart').getContext('2d');
+
+        function createComparisonChart(datasets) {
+            if (comparisonChart) {
+                comparisonChart.destroy();
+            }
+
+            comparisonChart = new Chart(comparisonCtx, {
+                type: 'bar',
+                data: {
+                    labels: chartData.comparison.reservoirs,
+                    datasets: datasets
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Water Level (TAF)'
+                            }
+                        },
+                        x: {
+                            ticks: {
+                                maxRotation: 45,
+                                minRotation: 45
+                            }
+                        }
+                    }
+                }
+            });
+        }
+
+        function showAllDays() {
+            const datasets = chartData.comparison.dates.map((date, idx) => ({
+                label: date,
+                data: chartData.comparison.data[idx],
+                backgroundColor: colors[idx % colors.length],
+                borderColor: colors[idx % colors.length],
+                borderWidth: 1
+            }));
+            createComparisonChart(datasets);
+        }
+
+        function showFirstLast() {
+            const datasets = [
+                {
+                    label: chartData.comparison.dates[0],
+                    data: chartData.comparison.data[0],
+                    backgroundColor: '#3498db',
+                    borderColor: '#2980b9',
+                    borderWidth: 2
+                },
+                {
+                    label: chartData.comparison.dates[chartData.comparison.dates.length - 1],
+                    data: chartData.comparison.data[chartData.comparison.data.length - 1],
+                    backgroundColor: '#e74c3c',
+                    borderColor: '#c0392b',
+                    borderWidth: 2
+                }
+            ];
+            createComparisonChart(datasets);
+        }
+
+        function showWeekly() {
+            // Show first, middle, and last
+            const mid = Math.floor(chartData.comparison.dates.length / 2);
+            const datasets = [
+                {
+                    label: chartData.comparison.dates[0],
+                    data: chartData.comparison.data[0],
+                    backgroundColor: '#3498db',
+                    borderColor: '#2980b9',
+                    borderWidth: 2
+                },
+                {
+                    label: chartData.comparison.dates[mid],
+                    data: chartData.comparison.data[mid],
+                    backgroundColor: '#f39c12',
+                    borderColor: '#e67e22',
+                    borderWidth: 2
+                },
+                {
+                    label: chartData.comparison.dates[chartData.comparison.dates.length - 1],
+                    data: chartData.comparison.data[chartData.comparison.data.length - 1],
+                    backgroundColor: '#e74c3c',
+                    borderColor: '#c0392b',
+                    borderWidth: 2
+                }
+            ];
+            createComparisonChart(datasets);
+        }
+
+        // Initialize with first vs last comparison
+        showFirstLast();
+    </script>
+</body>
+</html>

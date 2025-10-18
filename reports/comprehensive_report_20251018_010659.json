@@ -1,0 +1,170 @@
+[
+  {
+    "date": "10/11/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2636.8,
+        "min_water_level_taf": 2636.8,
+        "max_water_level_taf": 2636.8,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/11/2025",
+            "water_level_taf": 2636.8,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:06:42.810805",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2636.8,
+    "report_generated_at": "2025-10-18T01:06:59.930754"
+  },
+  {
+    "date": "10/12/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2629.67,
+        "min_water_level_taf": 2629.67,
+        "max_water_level_taf": 2629.67,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/12/2025",
+            "water_level_taf": 2629.67,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:06:43.311274",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2629.67,
+    "report_generated_at": "2025-10-18T01:06:59.930808"
+  },
+  {
+    "date": "10/13/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2626.4,
+        "min_water_level_taf": 2626.4,
+        "max_water_level_taf": 2626.4,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/13/2025",
+            "water_level_taf": 2626.4,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:06:43.811836",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2626.4,
+    "report_generated_at": "2025-10-18T01:06:59.930827"
+  },
+  {
+    "date": "10/14/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2623.22,
+        "min_water_level_taf": 2623.22,
+        "max_water_level_taf": 2623.22,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/14/2025",
+            "water_level_taf": 2623.22,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:06:44.312348",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2623.22,
+    "report_generated_at": "2025-10-18T01:06:59.930841"
+  },
+  {
+    "date": "10/15/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2618.94,
+        "min_water_level_taf": 2618.94,
+        "max_water_level_taf": 2618.94,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/15/2025",
+            "water_level_taf": 2618.94,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:06:44.813212",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2618.94,
+    "report_generated_at": "2025-10-18T01:06:59.930856"
+  },
+  {
+    "date": "10/16/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2613.13,
+        "min_water_level_taf": 2613.13,
+        "max_water_level_taf": 2613.13,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/16/2025",
+            "water_level_taf": 2613.13,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:06:45.313588",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2613.13,
+    "report_generated_at": "2025-10-18T01:06:59.930868"
+  },
+  {
+    "date": "10/17/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2608.6,
+        "min_water_level_taf": 2608.6,
+        "max_water_level_taf": 2608.6,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/17/2025",
+            "water_level_taf": 2608.6,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:06:45.814283",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2608.6,
+    "report_generated_at": "2025-10-18T01:06:59.930881"
+  }
+]

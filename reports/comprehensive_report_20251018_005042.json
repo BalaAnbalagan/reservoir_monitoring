@@ -1,0 +1,312 @@
+[
+  {
+    "date": "10/1/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2721.0,
+        "min_water_level_taf": 2721.0,
+        "max_water_level_taf": 2721.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/1/2024",
+            "water_level_taf": 2721.0,
+            "timestamp": "2024-10-01T00:00:00",
+            "published_at": "2025-10-18T00:50:35.210796"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1999.0,
+        "min_water_level_taf": 1999.0,
+        "max_water_level_taf": 1999.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/1/2024",
+            "water_level_taf": 1999.0,
+            "timestamp": "2024-10-01T00:00:00",
+            "published_at": "2025-10-18T00:50:39.730992"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4720.0,
+    "report_generated_at": "2025-10-18T00:50:42.235875"
+  },
+  {
+    "date": "10/2/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2727.0,
+        "min_water_level_taf": 2727.0,
+        "max_water_level_taf": 2727.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/2/2024",
+            "water_level_taf": 2727.0,
+            "timestamp": "2024-10-02T00:00:00",
+            "published_at": "2025-10-18T00:50:35.711434"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2000.0,
+        "min_water_level_taf": 2000.0,
+        "max_water_level_taf": 2000.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/2/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-10-02T00:00:00",
+            "published_at": "2025-10-18T00:50:40.231525"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4727.0,
+    "report_generated_at": "2025-10-18T00:50:42.235977"
+  },
+  {
+    "date": "10/4/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2721.0,
+        "min_water_level_taf": 2721.0,
+        "max_water_level_taf": 2721.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/4/2024",
+            "water_level_taf": 2721.0,
+            "timestamp": "2024-10-04T00:00:00",
+            "published_at": "2025-10-18T00:50:36.712712"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2000.0,
+        "min_water_level_taf": 2000.0,
+        "max_water_level_taf": 2000.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/4/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-10-04T00:00:00",
+            "published_at": "2025-10-18T00:50:41.232670"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4721.0,
+    "report_generated_at": "2025-10-18T00:50:42.236014"
+  },
+  {
+    "date": "10/5/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2724.5,
+        "min_water_level_taf": 2722.0,
+        "max_water_level_taf": 2727.0,
+        "readings_count": 2,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/5/2024",
+            "water_level_taf": 2722.0,
+            "timestamp": "2024-10-05T00:00:00",
+            "published_at": "2025-10-18T00:50:36.211954"
+          },
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/5/2024",
+            "water_level_taf": 2727.0,
+            "timestamp": "2024-10-05T00:00:00",
+            "published_at": "2025-10-18T00:50:37.213602"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2000.0,
+        "min_water_level_taf": 2000.0,
+        "max_water_level_taf": 2000.0,
+        "readings_count": 2,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/5/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-10-05T00:00:00",
+            "published_at": "2025-10-18T00:50:40.732197"
+          },
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/5/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-10-05T00:00:00",
+            "published_at": "2025-10-18T00:50:41.733453"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4724.5,
+    "report_generated_at": "2025-10-18T00:50:42.236045"
+  },
+  {
+    "date": "10/6/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2726.0,
+        "min_water_level_taf": 2726.0,
+        "max_water_level_taf": 2726.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/6/2024",
+            "water_level_taf": 2726.0,
+            "timestamp": "2024-10-06T00:00:00",
+            "published_at": "2025-10-18T00:50:37.714151"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2000.0,
+        "min_water_level_taf": 2000.0,
+        "max_water_level_taf": 2000.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/6/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-10-06T00:00:00",
+            "published_at": "2025-10-18T00:50:42.234085"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4726.0,
+    "report_generated_at": "2025-10-18T00:50:42.236085"
+  },
+  {
+    "date": "10/7/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2727.0,
+        "min_water_level_taf": 2727.0,
+        "max_water_level_taf": 2727.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/7/2024",
+            "water_level_taf": 2727.0,
+            "timestamp": "2024-10-07T00:00:00",
+            "published_at": "2025-10-18T00:50:38.214682"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 2727.0,
+    "report_generated_at": "2025-10-18T00:50:42.236163"
+  },
+  {
+    "date": "9/29/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2720.0,
+        "min_water_level_taf": 2720.0,
+        "max_water_level_taf": 2720.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "9/29/2024",
+            "water_level_taf": 2720.0,
+            "timestamp": "2024-09-29T00:00:00",
+            "published_at": "2025-10-18T00:50:34.209154"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2000.0,
+        "min_water_level_taf": 2000.0,
+        "max_water_level_taf": 2000.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "9/29/2024",
+            "water_level_taf": 2000.0,
+            "timestamp": "2024-09-29T00:00:00",
+            "published_at": "2025-10-18T00:50:38.730267"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4720.0,
+    "report_generated_at": "2025-10-18T00:50:42.236185"
+  },
+  {
+    "date": "9/30/2024",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2727.0,
+        "min_water_level_taf": 2727.0,
+        "max_water_level_taf": 2727.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "9/30/2024",
+            "water_level_taf": 2727.0,
+            "timestamp": "2024-09-30T00:00:00",
+            "published_at": "2025-10-18T00:50:34.709839"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 2001.0,
+        "min_water_level_taf": 2001.0,
+        "max_water_level_taf": 2001.0,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "9/30/2024",
+            "water_level_taf": 2001.0,
+            "timestamp": "2024-09-30T00:00:00",
+            "published_at": "2025-10-18T00:50:39.230507"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 4728.0,
+    "report_generated_at": "2025-10-18T00:50:42.236214"
+  }
+]

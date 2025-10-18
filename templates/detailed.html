@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detailed Analysis - California Reservoir Monitoring</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background: #ecf0f1;
+            padding: 15px 30px;
+        }
+
+        nav a {
+            color: #3498db;
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .data-table {
+            padding: 30px;
+        }
+
+        .data-table h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            color: white;
+        }
+
+        th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        tbody tr:hover {
+            background-color: #f8f9fa;
+        }
+
+        .change-positive {
+            color: #27ae60;
+            font-weight: bold;
+        }
+
+        .change-negative {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Detailed Reservoir Analysis</h1>
+            <p>Complete Historical Data & Trends</p>
+        </header>
+
+        <nav>
+            <a href="/">← Back to Summary</a>
+            <a href="/api/historical" target="_blank">Download JSON</a>
+        </nav>
+
+        <div class="data-table">
+            <h2>Complete Historical Data</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Reservoir</th>
+                        <th>Average (TAF)</th>
+                        <th>Min (TAF)</th>
+                        <th>Max (TAF)</th>
+                        <th>Readings</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for daily_record in data|reverse %}
+                        {% for reservoir_name, reservoir_data in daily_record.reservoirs.items() %}
+                        <tr>
+                            <td>{{ daily_record.date }}</td>
+                            <td><strong>{{ reservoir_name }}</strong></td>
+                            <td>{{ "{:,.2f}".format(reservoir_data.average_water_level_taf) }}</td>
+                            <td>{{ "{:,.2f}".format(reservoir_data.min_water_level_taf) }}</td>
+                            <td>{{ "{:,.2f}".format(reservoir_data.max_water_level_taf) }}</td>
+                            <td>{{ reservoir_data.readings_count }}</td>
+                        </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        {% if changes %}
+        <div class="data-table">
+            <h2>Day-Over-Day Changes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Reservoir</th>
+                        <th>Previous (TAF)</th>
+                        <th>Current (TAF)</th>
+                        <th>Change (TAF)</th>
+                        <th>Change (%)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for change_day in changes|reverse %}
+                        {% for reservoir_name, change_data in change_day.reservoirs.items() %}
+                        <tr>
+                            <td>{{ change_day.date }}</td>
+                            <td><strong>{{ reservoir_name }}</strong></td>
+                            <td>{{ "{:,.2f}".format(change_data.previous) }}</td>
+                            <td>{{ "{:,.2f}".format(change_data.current) }}</td>
+                            <td class="{% if change_data.change >= 0 %}change-positive{% else %}change-negative{% endif %}">
+                                {{ "{:+,.2f}".format(change_data.change) }}
+                            </td>
+                            <td class="{% if change_data.percent_change >= 0 %}change-positive{% else %}change-negative{% endif %}">
+                                {{ "{:+,.2f}".format(change_data.percent_change) }}%
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% endif %}
+
+        <footer>
+            <p><strong>California Department of Water Resources</strong></p>
+            <p>Last Updated: {{ last_update }}</p>
+        </footer>
+    </div>
+</body>
+</html>

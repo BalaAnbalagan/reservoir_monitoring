@@ -1,0 +1,102 @@
+================================================================================
+CALIFORNIA DEPARTMENT OF WATER RESOURCES
+RESERVOIR WATER MARK LEVEL DAILY SUMMARY REPORT
+================================================================================
+
+Report Generated: 2025-10-18 01:06:59
+Total Messages Collected: 7
+Reporting Period: 7 days
+
+================================================================================
+
+DATE: 10/11/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2636.80 TAF
+    Minimum Water Level:    2636.80 TAF
+    Maximum Water Level:    2636.80 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2636.80 TAF
+
+================================================================================
+
+DATE: 10/12/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2629.67 TAF
+    Minimum Water Level:    2629.67 TAF
+    Maximum Water Level:    2629.67 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2629.67 TAF
+
+================================================================================
+
+DATE: 10/13/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2626.40 TAF
+    Minimum Water Level:    2626.40 TAF
+    Maximum Water Level:    2626.40 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2626.40 TAF
+
+================================================================================
+
+DATE: 10/14/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2623.22 TAF
+    Minimum Water Level:    2623.22 TAF
+    Maximum Water Level:    2623.22 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2623.22 TAF
+
+================================================================================
+
+DATE: 10/15/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2618.94 TAF
+    Minimum Water Level:    2618.94 TAF
+    Maximum Water Level:    2618.94 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2618.94 TAF
+
+================================================================================
+
+DATE: 10/16/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2613.13 TAF
+    Minimum Water Level:    2613.13 TAF
+    Maximum Water Level:    2613.13 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2613.13 TAF
+
+================================================================================
+
+DATE: 10/17/2025
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2608.60 TAF
+    Minimum Water Level:    2608.60 TAF
+    Maximum Water Level:    2608.60 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    2608.60 TAF
+
+================================================================================
+

@@ -1,0 +1,211 @@
+================================================================================
+CALIFORNIA DEPARTMENT OF WATER RESOURCES
+RESERVOIR WATER MARK LEVEL DAILY SUMMARY REPORT
+================================================================================
+
+Report Generated: 2025-10-18 00:57:57
+Total Messages Collected: 27
+Reporting Period: 8 days
+
+================================================================================
+
+DATE: 10/1/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2721.00 TAF
+    Minimum Water Level:    2721.00 TAF
+    Maximum Water Level:    2721.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    1999.00 TAF
+    Minimum Water Level:    1999.00 TAF
+    Maximum Water Level:    1999.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     192.00 TAF
+    Minimum Water Level:     192.00 TAF
+    Maximum Water Level:     192.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4912.00 TAF
+
+================================================================================
+
+DATE: 10/2/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2727.00 TAF
+    Minimum Water Level:    2727.00 TAF
+    Maximum Water Level:    2727.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     194.00 TAF
+    Minimum Water Level:     194.00 TAF
+    Maximum Water Level:     194.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4921.00 TAF
+
+================================================================================
+
+DATE: 10/4/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2721.00 TAF
+    Minimum Water Level:    2721.00 TAF
+    Maximum Water Level:    2721.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     191.00 TAF
+    Minimum Water Level:     191.00 TAF
+    Maximum Water Level:     191.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4912.00 TAF
+
+================================================================================
+
+DATE: 10/5/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2724.50 TAF
+    Minimum Water Level:    2722.00 TAF
+    Maximum Water Level:    2727.00 TAF
+    Number of Readings:           2
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           2
+
+  SONOMA RESERVOIR:
+    Average Water Level:     193.00 TAF
+    Minimum Water Level:     193.00 TAF
+    Maximum Water Level:     193.00 TAF
+    Number of Readings:           2
+
+  TOTAL WATER LEVEL (All Reservoirs):    4917.50 TAF
+
+================================================================================
+
+DATE: 10/6/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2726.00 TAF
+    Minimum Water Level:    2726.00 TAF
+    Maximum Water Level:    2726.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     192.00 TAF
+    Minimum Water Level:     192.00 TAF
+    Maximum Water Level:     192.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4918.00 TAF
+
+================================================================================
+
+DATE: 10/7/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2727.00 TAF
+    Minimum Water Level:    2727.00 TAF
+    Maximum Water Level:    2727.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     192.00 TAF
+    Minimum Water Level:     192.00 TAF
+    Maximum Water Level:     192.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4919.00 TAF
+
+================================================================================
+
+DATE: 9/29/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2720.00 TAF
+    Minimum Water Level:    2720.00 TAF
+    Maximum Water Level:    2720.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2000.00 TAF
+    Minimum Water Level:    2000.00 TAF
+    Maximum Water Level:    2000.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     192.00 TAF
+    Minimum Water Level:     192.00 TAF
+    Maximum Water Level:     192.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4912.00 TAF
+
+================================================================================
+
+DATE: 9/30/2024
+--------------------------------------------------------------------------------
+
+  SHASTA RESERVOIR:
+    Average Water Level:    2727.00 TAF
+    Minimum Water Level:    2727.00 TAF
+    Maximum Water Level:    2727.00 TAF
+    Number of Readings:           1
+
+  OROVILLE RESERVOIR:
+    Average Water Level:    2001.00 TAF
+    Minimum Water Level:    2001.00 TAF
+    Maximum Water Level:    2001.00 TAF
+    Number of Readings:           1
+
+  SONOMA RESERVOIR:
+    Average Water Level:     193.00 TAF
+    Minimum Water Level:     193.00 TAF
+    Maximum Water Level:     193.00 TAF
+    Number of Readings:           1
+
+  TOTAL WATER LEVEL (All Reservoirs):    4921.00 TAF
+
+================================================================================
+

@@ -1,0 +1,1819 @@
+[
+  {
+    "date": "10/11/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2636.8,
+        "min_water_level_taf": 2636.8,
+        "max_water_level_taf": 2636.8,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/11/2025",
+            "water_level_taf": 2636.8,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:42:40.831569",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1914.96,
+        "min_water_level_taf": 1914.96,
+        "max_water_level_taf": 1914.96,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/11/2025",
+            "water_level_taf": 1914.96,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:42:44.864441",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1620.2,
+        "min_water_level_taf": 1620.2,
+        "max_water_level_taf": 1620.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/11/2025",
+            "water_level_taf": 1620.2,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:42:49.083300",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1550.78,
+        "min_water_level_taf": 1550.78,
+        "max_water_level_taf": 1550.78,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/11/2025",
+            "water_level_taf": 1550.78,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:42:53.243412",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 621.37,
+        "min_water_level_taf": 621.37,
+        "max_water_level_taf": 621.37,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/11/2025",
+            "water_level_taf": 621.37,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:42:56.938079",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 439.34,
+        "min_water_level_taf": 439.34,
+        "max_water_level_taf": 439.34,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/11/2025",
+            "water_level_taf": 439.34,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:00.531094",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.77,
+        "min_water_level_taf": 63.77,
+        "max_water_level_taf": 63.77,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/11/2025",
+            "water_level_taf": 63.77,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:05.264630",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.72,
+        "min_water_level_taf": 148.72,
+        "max_water_level_taf": 148.72,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/11/2025",
+            "water_level_taf": 148.72,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:09.386366",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 271.56,
+        "min_water_level_taf": 271.56,
+        "max_water_level_taf": 271.56,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/11/2025",
+            "water_level_taf": 271.56,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:13.011509",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 768.04,
+        "min_water_level_taf": 768.04,
+        "max_water_level_taf": 768.04,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/11/2025",
+            "water_level_taf": 768.04,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:17.793212",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 247.66,
+        "min_water_level_taf": 247.66,
+        "max_water_level_taf": 247.66,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/11/2025",
+            "water_level_taf": 247.66,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:21.415645",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 239.73,
+        "min_water_level_taf": 239.73,
+        "max_water_level_taf": 239.73,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/11/2025",
+            "water_level_taf": 239.73,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:24.999334",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1356.3,
+        "min_water_level_taf": 1356.3,
+        "max_water_level_taf": 1356.3,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/11/2025",
+            "water_level_taf": 1356.3,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:30.290609",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 306.73,
+        "min_water_level_taf": 306.73,
+        "max_water_level_taf": 306.73,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/11/2025",
+            "water_level_taf": 306.73,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:34.000972",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 212.04,
+        "min_water_level_taf": 212.04,
+        "max_water_level_taf": 212.04,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/11/2025",
+            "water_level_taf": 212.04,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:37.693531",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.19,
+        "min_water_level_taf": 124.19,
+        "max_water_level_taf": 124.19,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/11/2025",
+            "water_level_taf": 124.19,
+            "timestamp": "2025-10-11T00:00:00",
+            "published_at": "2025-10-18T01:43:41.854345",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12522.19,
+    "report_generated_at": "2025-10-18T01:44:29.080357"
+  },
+  {
+    "date": "10/12/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2629.67,
+        "min_water_level_taf": 2629.67,
+        "max_water_level_taf": 2629.67,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/12/2025",
+            "water_level_taf": 2629.67,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:42:41.332139",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1902.23,
+        "min_water_level_taf": 1902.23,
+        "max_water_level_taf": 1902.23,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/12/2025",
+            "water_level_taf": 1902.23,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:42:45.364893",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1620.2,
+        "min_water_level_taf": 1620.2,
+        "max_water_level_taf": 1620.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/12/2025",
+            "water_level_taf": 1620.2,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:42:49.584928",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1548.67,
+        "min_water_level_taf": 1548.67,
+        "max_water_level_taf": 1548.67,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/12/2025",
+            "water_level_taf": 1548.67,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:42:53.744061",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 619.87,
+        "min_water_level_taf": 619.87,
+        "max_water_level_taf": 619.87,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/12/2025",
+            "water_level_taf": 619.87,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:42:57.438398",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 438.16,
+        "min_water_level_taf": 438.16,
+        "max_water_level_taf": 438.16,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/12/2025",
+            "water_level_taf": 438.16,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:01.031374",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.2,
+        "min_water_level_taf": 63.2,
+        "max_water_level_taf": 63.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/12/2025",
+            "water_level_taf": 63.2,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:05.765389",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.62,
+        "min_water_level_taf": 148.62,
+        "max_water_level_taf": 148.62,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/12/2025",
+            "water_level_taf": 148.62,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:09.886563",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 269.95,
+        "min_water_level_taf": 269.95,
+        "max_water_level_taf": 269.95,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/12/2025",
+            "water_level_taf": 269.95,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:13.511962",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 767.85,
+        "min_water_level_taf": 767.85,
+        "max_water_level_taf": 767.85,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/12/2025",
+            "water_level_taf": 767.85,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:18.294056",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 247.31,
+        "min_water_level_taf": 247.31,
+        "max_water_level_taf": 247.31,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/12/2025",
+            "water_level_taf": 247.31,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:21.916531",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 240.7,
+        "min_water_level_taf": 240.7,
+        "max_water_level_taf": 240.7,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/12/2025",
+            "water_level_taf": 240.7,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:25.499818",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1355.76,
+        "min_water_level_taf": 1355.76,
+        "max_water_level_taf": 1355.76,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/12/2025",
+            "water_level_taf": 1355.76,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:30.791063",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 306.09,
+        "min_water_level_taf": 306.09,
+        "max_water_level_taf": 306.09,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/12/2025",
+            "water_level_taf": 306.09,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:34.501418",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 211.29,
+        "min_water_level_taf": 211.29,
+        "max_water_level_taf": 211.29,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/12/2025",
+            "water_level_taf": 211.29,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:38.194105",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.26,
+        "min_water_level_taf": 124.26,
+        "max_water_level_taf": 124.26,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/12/2025",
+            "water_level_taf": 124.26,
+            "timestamp": "2025-10-12T00:00:00",
+            "published_at": "2025-10-18T01:43:42.355351",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12493.83,
+    "report_generated_at": "2025-10-18T01:44:29.080729"
+  },
+  {
+    "date": "10/13/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2626.4,
+        "min_water_level_taf": 2626.4,
+        "max_water_level_taf": 2626.4,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/13/2025",
+            "water_level_taf": 2626.4,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:42:41.832893",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1899.13,
+        "min_water_level_taf": 1899.13,
+        "max_water_level_taf": 1899.13,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/13/2025",
+            "water_level_taf": 1899.13,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:42:45.865705",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1618.55,
+        "min_water_level_taf": 1618.55,
+        "max_water_level_taf": 1618.55,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/13/2025",
+            "water_level_taf": 1618.55,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:42:50.086142",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1547.62,
+        "min_water_level_taf": 1547.62,
+        "max_water_level_taf": 1547.62,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/13/2025",
+            "water_level_taf": 1547.62,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:42:54.244526",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 619.24,
+        "min_water_level_taf": 619.24,
+        "max_water_level_taf": 619.24,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/13/2025",
+            "water_level_taf": 619.24,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:42:57.938818",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.29,
+        "min_water_level_taf": 437.29,
+        "max_water_level_taf": 437.29,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/13/2025",
+            "water_level_taf": 437.29,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:01.531794",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.16,
+        "min_water_level_taf": 63.16,
+        "max_water_level_taf": 63.16,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/13/2025",
+            "water_level_taf": 63.16,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:06.266425",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.47,
+        "min_water_level_taf": 148.47,
+        "max_water_level_taf": 148.47,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/13/2025",
+            "water_level_taf": 148.47,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:10.387523",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 268.42,
+        "min_water_level_taf": 268.42,
+        "max_water_level_taf": 268.42,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/13/2025",
+            "water_level_taf": 268.42,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:14.012809",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 767.65,
+        "min_water_level_taf": 767.65,
+        "max_water_level_taf": 767.65,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/13/2025",
+            "water_level_taf": 767.65,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:18.794800",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 248.42,
+        "min_water_level_taf": 248.42,
+        "max_water_level_taf": 248.42,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/13/2025",
+            "water_level_taf": 248.42,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:22.417459",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 241.51,
+        "min_water_level_taf": 241.51,
+        "max_water_level_taf": 241.51,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/13/2025",
+            "water_level_taf": 241.51,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:26.000605",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1355.75,
+        "min_water_level_taf": 1355.75,
+        "max_water_level_taf": 1355.75,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/13/2025",
+            "water_level_taf": 1355.75,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:31.291494",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 305.83,
+        "min_water_level_taf": 305.83,
+        "max_water_level_taf": 305.83,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/13/2025",
+            "water_level_taf": 305.83,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:35.002267",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 210.54,
+        "min_water_level_taf": 210.54,
+        "max_water_level_taf": 210.54,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/13/2025",
+            "water_level_taf": 210.54,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:38.695269",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.42,
+        "min_water_level_taf": 124.42,
+        "max_water_level_taf": 124.42,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/13/2025",
+            "water_level_taf": 124.42,
+            "timestamp": "2025-10-13T00:00:00",
+            "published_at": "2025-10-18T01:43:42.856682",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12482.4,
+    "report_generated_at": "2025-10-18T01:44:29.081028"
+  },
+  {
+    "date": "10/14/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2623.22,
+        "min_water_level_taf": 2623.22,
+        "max_water_level_taf": 2623.22,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/14/2025",
+            "water_level_taf": 2623.22,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:42:42.333231",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1896.66,
+        "min_water_level_taf": 1896.66,
+        "max_water_level_taf": 1896.66,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/14/2025",
+            "water_level_taf": 1896.66,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:42:46.366363",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1620.2,
+        "min_water_level_taf": 1620.2,
+        "max_water_level_taf": 1620.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/14/2025",
+            "water_level_taf": 1620.2,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:42:50.586818",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1546.57,
+        "min_water_level_taf": 1546.57,
+        "max_water_level_taf": 1546.57,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/14/2025",
+            "water_level_taf": 1546.57,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:42:54.745263",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 618.86,
+        "min_water_level_taf": 618.86,
+        "max_water_level_taf": 618.86,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/14/2025",
+            "water_level_taf": 618.86,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:42:58.439300",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.58,
+        "min_water_level_taf": 437.58,
+        "max_water_level_taf": 437.58,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/14/2025",
+            "water_level_taf": 437.58,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:02.032436",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.19,
+        "min_water_level_taf": 63.19,
+        "max_water_level_taf": 63.19,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/14/2025",
+            "water_level_taf": 63.19,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:06.767285",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.75,
+        "min_water_level_taf": 148.75,
+        "max_water_level_taf": 148.75,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/14/2025",
+            "water_level_taf": 148.75,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:10.888007",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 270.47,
+        "min_water_level_taf": 270.47,
+        "max_water_level_taf": 270.47,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/14/2025",
+            "water_level_taf": 270.47,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:14.513648",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 767.75,
+        "min_water_level_taf": 767.75,
+        "max_water_level_taf": 767.75,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/14/2025",
+            "water_level_taf": 767.75,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:19.295578",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 249.86,
+        "min_water_level_taf": 249.86,
+        "max_water_level_taf": 249.86,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/14/2025",
+            "water_level_taf": 249.86,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:22.917967",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 243.38,
+        "min_water_level_taf": 243.38,
+        "max_water_level_taf": 243.38,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/14/2025",
+            "water_level_taf": 243.38,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:26.501498",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1356.11,
+        "min_water_level_taf": 1356.11,
+        "max_water_level_taf": 1356.11,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/14/2025",
+            "water_level_taf": 1356.11,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:31.791950",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 306.09,
+        "min_water_level_taf": 306.09,
+        "max_water_level_taf": 306.09,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/14/2025",
+            "water_level_taf": 306.09,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:35.502619",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 210.67,
+        "min_water_level_taf": 210.67,
+        "max_water_level_taf": 210.67,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/14/2025",
+            "water_level_taf": 210.67,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:39.196059",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.56,
+        "min_water_level_taf": 124.56,
+        "max_water_level_taf": 124.56,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/14/2025",
+            "water_level_taf": 124.56,
+            "timestamp": "2025-10-14T00:00:00",
+            "published_at": "2025-10-18T01:43:43.357778",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12483.92,
+    "report_generated_at": "2025-10-18T01:44:29.081268"
+  },
+  {
+    "date": "10/15/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2618.94,
+        "min_water_level_taf": 2618.94,
+        "max_water_level_taf": 2618.94,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/15/2025",
+            "water_level_taf": 2618.94,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:42:42.833709",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1891.2,
+        "min_water_level_taf": 1891.2,
+        "max_water_level_taf": 1891.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/15/2025",
+            "water_level_taf": 1891.2,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:42:46.867252",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1618.65,
+        "min_water_level_taf": 1618.65,
+        "max_water_level_taf": 1618.65,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/15/2025",
+            "water_level_taf": 1618.65,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:42:51.087251",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1543.41,
+        "min_water_level_taf": 1543.41,
+        "max_water_level_taf": 1543.41,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/15/2025",
+            "water_level_taf": 1543.41,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:42:55.245817",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 617.61,
+        "min_water_level_taf": 617.61,
+        "max_water_level_taf": 617.61,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/15/2025",
+            "water_level_taf": 617.61,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:42:58.940088",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 437.07,
+        "min_water_level_taf": 437.07,
+        "max_water_level_taf": 437.07,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/15/2025",
+            "water_level_taf": 437.07,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:02.533245",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.23,
+        "min_water_level_taf": 63.23,
+        "max_water_level_taf": 63.23,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/15/2025",
+            "water_level_taf": 63.23,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:07.267945",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.72,
+        "min_water_level_taf": 148.72,
+        "max_water_level_taf": 148.72,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/15/2025",
+            "water_level_taf": 148.72,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:11.388460",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 274.49,
+        "min_water_level_taf": 274.49,
+        "max_water_level_taf": 274.49,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/15/2025",
+            "water_level_taf": 274.49,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:15.014212",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 767.61,
+        "min_water_level_taf": 767.61,
+        "max_water_level_taf": 767.61,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/15/2025",
+            "water_level_taf": 767.61,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:19.796231",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 251.83,
+        "min_water_level_taf": 251.83,
+        "max_water_level_taf": 251.83,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/15/2025",
+            "water_level_taf": 251.83,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:23.418714",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 244.89,
+        "min_water_level_taf": 244.89,
+        "max_water_level_taf": 244.89,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/15/2025",
+            "water_level_taf": 244.89,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:27.002116",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1355.93,
+        "min_water_level_taf": 1355.93,
+        "max_water_level_taf": 1355.93,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/15/2025",
+            "water_level_taf": 1355.93,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:32.292674",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 306.35,
+        "min_water_level_taf": 306.35,
+        "max_water_level_taf": 306.35,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/15/2025",
+            "water_level_taf": 306.35,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:36.003227",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 210.2,
+        "min_water_level_taf": 210.2,
+        "max_water_level_taf": 210.2,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/15/2025",
+            "water_level_taf": 210.2,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:39.697085",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.72,
+        "min_water_level_taf": 124.72,
+        "max_water_level_taf": 124.72,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/15/2025",
+            "water_level_taf": 124.72,
+            "timestamp": "2025-10-15T00:00:00",
+            "published_at": "2025-10-18T01:43:43.858505",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12474.85,
+    "report_generated_at": "2025-10-18T01:44:29.081500"
+  },
+  {
+    "date": "10/16/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2613.13,
+        "min_water_level_taf": 2613.13,
+        "max_water_level_taf": 2613.13,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/16/2025",
+            "water_level_taf": 2613.13,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:42:43.334461",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "OROVILLE": {
+        "reservoir_id": "OROVILLE",
+        "average_water_level_taf": 1886.27,
+        "min_water_level_taf": 1886.27,
+        "max_water_level_taf": 1886.27,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "OROVILLE",
+            "date": "10/16/2025",
+            "water_level_taf": 1886.27,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:42:47.368501",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1619.91,
+        "min_water_level_taf": 1619.91,
+        "max_water_level_taf": 1619.91,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/16/2025",
+            "water_level_taf": 1619.91,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:42:51.587791",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DON_PEDRO": {
+        "reservoir_id": "DON_PEDRO",
+        "average_water_level_taf": 1542.37,
+        "min_water_level_taf": 1542.37,
+        "max_water_level_taf": 1542.37,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DON_PEDRO",
+            "date": "10/16/2025",
+            "water_level_taf": 1542.37,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:42:55.746630",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "EXCHEQUER": {
+        "reservoir_id": "EXCHEQUER",
+        "average_water_level_taf": 615.78,
+        "min_water_level_taf": 615.78,
+        "max_water_level_taf": 615.78,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "EXCHEQUER",
+            "date": "10/16/2025",
+            "water_level_taf": 615.78,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:42:59.440757",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 436.11,
+        "min_water_level_taf": 436.11,
+        "max_water_level_taf": 436.11,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/16/2025",
+            "water_level_taf": 436.11,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:03.034100",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.26,
+        "min_water_level_taf": 63.26,
+        "max_water_level_taf": 63.26,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/16/2025",
+            "water_level_taf": 63.26,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:07.768506",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CACHUMA": {
+        "reservoir_id": "CACHUMA",
+        "average_water_level_taf": 148.62,
+        "min_water_level_taf": 148.62,
+        "max_water_level_taf": 148.62,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CACHUMA",
+            "date": "10/16/2025",
+            "water_level_taf": 148.62,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:11.888885",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 276.4,
+        "min_water_level_taf": 276.4,
+        "max_water_level_taf": 276.4,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/16/2025",
+            "water_level_taf": 276.4,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:15.514635",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "DIAMOND_VALLEY": {
+        "reservoir_id": "DIAMOND_VALLEY",
+        "average_water_level_taf": 767.56,
+        "min_water_level_taf": 767.56,
+        "max_water_level_taf": 767.56,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "DIAMOND_VALLEY",
+            "date": "10/16/2025",
+            "water_level_taf": 767.56,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:20.296536",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "MILLERTON": {
+        "reservoir_id": "MILLERTON",
+        "average_water_level_taf": 252.99,
+        "min_water_level_taf": 252.99,
+        "max_water_level_taf": 252.99,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "MILLERTON",
+            "date": "10/16/2025",
+            "water_level_taf": 252.99,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:23.919895",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 246.26,
+        "min_water_level_taf": 246.26,
+        "max_water_level_taf": 246.26,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/16/2025",
+            "water_level_taf": 246.26,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:27.502943",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "BERRYESSA": {
+        "reservoir_id": "BERRYESSA",
+        "average_water_level_taf": 1355.04,
+        "min_water_level_taf": 1355.04,
+        "max_water_level_taf": 1355.04,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "BERRYESSA",
+            "date": "10/16/2025",
+            "water_level_taf": 1355.04,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:32.793344",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CAMANCHE": {
+        "reservoir_id": "CAMANCHE",
+        "average_water_level_taf": 306.6,
+        "min_water_level_taf": 306.6,
+        "max_water_level_taf": 306.6,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CAMANCHE",
+            "date": "10/16/2025",
+            "water_level_taf": 306.6,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:36.503843",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 209.38,
+        "min_water_level_taf": 209.38,
+        "max_water_level_taf": 209.38,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/16/2025",
+            "water_level_taf": 209.38,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:40.197992",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.69,
+        "min_water_level_taf": 124.69,
+        "max_water_level_taf": 124.69,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/16/2025",
+            "water_level_taf": 124.69,
+            "timestamp": "2025-10-16T00:00:00",
+            "published_at": "2025-10-18T01:43:44.359577",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 12464.37,
+    "report_generated_at": "2025-10-18T01:44:29.081699"
+  },
+  {
+    "date": "10/17/2025",
+    "reservoirs": {
+      "SHASTA": {
+        "reservoir_id": "SHASTA",
+        "average_water_level_taf": 2608.6,
+        "min_water_level_taf": 2608.6,
+        "max_water_level_taf": 2608.6,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SHASTA",
+            "date": "10/17/2025",
+            "water_level_taf": 2608.6,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:42:43.835039",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "NEW_MELONES": {
+        "reservoir_id": "NEW_MELONES",
+        "average_water_level_taf": 1619.82,
+        "min_water_level_taf": 1619.82,
+        "max_water_level_taf": 1619.82,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "NEW_MELONES",
+            "date": "10/17/2025",
+            "water_level_taf": 1619.82,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:42:52.088817",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "FOLSOM": {
+        "reservoir_id": "FOLSOM",
+        "average_water_level_taf": 435.09,
+        "min_water_level_taf": 435.09,
+        "max_water_level_taf": 435.09,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "FOLSOM",
+            "date": "10/17/2025",
+            "water_level_taf": 435.09,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:03.534758",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "SAN_LUIS": {
+        "reservoir_id": "SAN_LUIS",
+        "average_water_level_taf": 63.14,
+        "min_water_level_taf": 63.14,
+        "max_water_level_taf": 63.14,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "SAN_LUIS",
+            "date": "10/17/2025",
+            "water_level_taf": 63.14,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:08.268928",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "CASTAIC": {
+        "reservoir_id": "CASTAIC",
+        "average_water_level_taf": 279.69,
+        "min_water_level_taf": 279.69,
+        "max_water_level_taf": 279.69,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "CASTAIC",
+            "date": "10/17/2025",
+            "water_level_taf": 279.69,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:16.014881",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PINE_FLAT": {
+        "reservoir_id": "PINE_FLAT",
+        "average_water_level_taf": 247.73,
+        "min_water_level_taf": 247.73,
+        "max_water_level_taf": 247.73,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PINE_FLAT",
+            "date": "10/17/2025",
+            "water_level_taf": 247.73,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:28.003522",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "ISABELLA": {
+        "reservoir_id": "ISABELLA",
+        "average_water_level_taf": 208.9,
+        "min_water_level_taf": 208.9,
+        "max_water_level_taf": 208.9,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "ISABELLA",
+            "date": "10/17/2025",
+            "water_level_taf": 208.9,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:40.698755",
+            "source": "CDEC_API"
+          }
+        ]
+      },
+      "PERRIS": {
+        "reservoir_id": "PERRIS",
+        "average_water_level_taf": 124.85,
+        "min_water_level_taf": 124.85,
+        "max_water_level_taf": 124.85,
+        "readings_count": 1,
+        "readings": [
+          {
+            "reservoir_id": "PERRIS",
+            "date": "10/17/2025",
+            "water_level_taf": 124.85,
+            "timestamp": "2025-10-17T00:00:00",
+            "published_at": "2025-10-18T01:43:44.860521",
+            "source": "CDEC_API"
+          }
+        ]
+      }
+    },
+    "total_water_level_taf": 5587.82,
+    "report_generated_at": "2025-10-18T01:44:29.081910"
+  }
+]
