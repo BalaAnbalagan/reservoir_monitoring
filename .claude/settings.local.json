@@ -1,10 +1,10 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python app.py)",
-      "Bash(dir /b)",
-      "Bash(git init)",
-      "Bash(git add .)"
+      "Bash(git add db_config.py requirements.txt subscriber.py app.py .env.example .github/workflows/update-data.yml)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nAdd MongoDB Atlas support for cloud database storage\n\nFeatures:\n- db_config.py: Database manager supporting both MongoDB and JSON\n- Automatic fallback from MongoDB to JSON if connection fails\n- subscriber.py: Saves reports to MongoDB when DB_MODE=mongodb\n- app.py: Reads from MongoDB first, falls back to JSON files\n- Dual mode operation:\n  * Local dev: DB_MODE=json (JSON files)\n  * Production: DB_MODE=mongodb (MongoDB Atlas)\n\nConfiguration:\n- MongoDB URI stored in environment variable\n- GitHub Actions updated to use MongoDB\n- Supports both development and production seamlessly\n\nBenefits:\n- No more GitHub commits for data updates\n- Render.com never rebuilds for data changes\n- Scalable cloud storage (MongoDB Atlas free 512MB)\n- Faster dashboard updates\n- Professional architecture\n\nMongoDB Atlas Connection:\n- Cluster: reservoir-monitoring.lmdpkq6.mongodb.net\n- Database: reservoir_monitoring\n- Collection: daily_reports\n- Tested and working!\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")",
+      "Bash(git add README.md)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nUpdate README: Add section numbers, local vs cloud explanations, and contact details\n\nMajor improvements:\n- Added section numbers (1-12) throughout the document\n- Section 1: Added overview of two deployment modes (local vs cloud)\n- Section 3: Complete rewrite with separate explanations for:\n  * 3.1 Local Development Setup - Architecture diagram and workflow\n  * 3.2 Cloud Production Setup - Architecture diagram with GitHub Actions, HiveMQ, MongoDB, Render\n- Section 4: Updated architecture to explain both local and cloud modes\n- Section 5: Separated prerequisites for local development vs cloud production\n- Section 7: Complete overhaul with detailed usage instructions:\n  * 7.1 Local Development - Step-by-step local workflow with Mosquitto\n  * 7.2 Cloud Production - Automated workflow with monitoring and testing\n  * Added \"Switching Between Local and Cloud\" subsection\n- Section 12: Updated contact section with:\n  * Author: Bala Anbalagan\n  * Email: Bala.Anbalagan@sjsu.edu\n  * GitHub repository link\n\nThese changes provide clear guidance for both local development\nand cloud production deployments, making it easy for users to\nunderstand and choose the right approach for their needs.\n\n🤖 Generated with [Claude Code](https://claude.com/claude-code)\n\nCo-Authored-By: Claude <noreply@anthropic.com>\nEOF\n)\")"
     ],
     "deny": [],
     "ask": []
