@@ -10,12 +10,15 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      # Use Cloud MQTT for GitHub Actions
+      # Use Cloud MQTT and MongoDB for GitHub Actions
       MQTT_ENV: cloud
       MQTT_CLOUD_BROKER: ${{ secrets.MQTT_CLOUD_BROKER }}
       MQTT_CLOUD_PORT: ${{ secrets.MQTT_CLOUD_PORT }}
       MQTT_CLOUD_USER: ${{ secrets.MQTT_CLOUD_USER }}
       MQTT_CLOUD_PASS: ${{ secrets.MQTT_CLOUD_PASS }}
+      # MongoDB Atlas
+      DB_MODE: mongodb
+      MONGODB_URI: ${{ secrets.MONGODB_URI }}
 
     steps:
       - name: Checkout repository

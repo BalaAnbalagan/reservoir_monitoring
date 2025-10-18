@@ -19,12 +19,26 @@ DATA_DIR = BASE_DIR / 'data'
 
 
 def get_latest_report():
-    """Get the latest comprehensive report"""
+    """Get the latest comprehensive report from MongoDB or JSON files"""
     try:
+        # Try MongoDB first (if configured)
+        from db_config import DatabaseManager
+        db = DatabaseManager()
+
+        if db.mode == 'mongodb':
+            data = db.get_all_reports()
+            db.close()
+            if data:
+                print(f"[MongoDB] Loaded {len(data)} records from database")
+                return data
+
+        # Fallback to JSON files
         json_files = sorted(REPORTS_DIR.glob('comprehensive_report_*.json'))
         if json_files:
             with open(json_files[-1], 'r') as f:
-                return json.load(f)
+                data = json.load(f)
+                print(f"[JSON] Loaded {len(data) if isinstance(data, list) else 1} records from file")
+                return data
     except Exception as e:
         print(f"Error loading report: {e}")
     return []

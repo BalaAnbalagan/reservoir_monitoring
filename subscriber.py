@@ -207,7 +207,7 @@ class ReservoirSubscriber:
 
             all_reports.append(daily_summary)
 
-        # Save comprehensive report
+        # Save comprehensive report to JSON
         report_file = output_dir / f"comprehensive_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(report_file, 'w') as f:
             json.dump(all_reports, f, indent=2)
@@ -216,6 +216,17 @@ class ReservoirSubscriber:
         print(f"Report saved to: {report_file}")
         print(f"Total messages processed: {self.message_count}")
         print("="*60)
+
+        # Save to MongoDB (if enabled)
+        try:
+            from db_config import DatabaseManager
+            db = DatabaseManager()
+            if db.mode == 'mongodb':
+                print("\n[MongoDB] Saving reports to database...")
+                db.save_daily_report(all_reports)
+            db.close()
+        except Exception as e:
+            print(f"\n[MongoDB] Skipping database save: {e}")
 
         # Generate human-readable summary
         self.generate_text_report(all_reports, output_dir)
