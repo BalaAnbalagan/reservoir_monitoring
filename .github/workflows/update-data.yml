@@ -1,13 +1,21 @@
-name: Update Reservoir Data
+name: Update Reservoir Data with Cloud MQTT
 
 on:
   schedule:
-    - cron: '0 8 * * *'  # Daily at 8 AM UTC
-  workflow_dispatch:      # Manual trigger button
+    - cron: '0 8 * * *'  # Daily at 8 AM UTC (midnight PST / 1 AM PDT)
+  workflow_dispatch:      # Manual trigger button in GitHub Actions tab
 
 jobs:
   update-data:
     runs-on: ubuntu-latest
+
+    env:
+      # Use Cloud MQTT for GitHub Actions
+      MQTT_ENV: cloud
+      MQTT_CLOUD_BROKER: ${{ secrets.MQTT_CLOUD_BROKER }}
+      MQTT_CLOUD_PORT: ${{ secrets.MQTT_CLOUD_PORT }}
+      MQTT_CLOUD_USER: ${{ secrets.MQTT_CLOUD_USER }}
+      MQTT_CLOUD_PASS: ${{ secrets.MQTT_CLOUD_PASS }}
 
     steps:
       - name: Checkout repository
@@ -22,17 +30,52 @@ jobs:
         run: |
           pip install -r requirements.txt
 
-      - name: Fetch latest reservoir data from CDEC API
+      - name: Run Subscriber (collect data for 90 seconds)
         run: |
-          # This script fetches data directly from CDEC API and generates reports
-          # Note: This runs without MQTT broker, just generates JSON reports
+          echo "Starting subscriber to collect data from cloud MQTT..."
+          python subscriber.py --duration 90 &
+          SUBSCRIBER_PID=$!
+          sleep 5  # Give subscriber time to connect
+          echo "Subscriber started with PID: $SUBSCRIBER_PID"
+        continue-on-error: false
+
+      - name: Publish data to Cloud MQTT
+        run: |
+          echo "Publishing reservoir data to cloud MQTT..."
+          sleep 5  # Let subscriber fully initialize
           python api_publisher.py --reservoir ALL --days 7
-        continue-on-error: true
+        continue-on-error: false
+
+      - name: Wait for subscriber to finish
+        run: |
+          echo "Waiting for subscriber to collect all messages..."
+          sleep 85  # Wait for subscriber duration to complete
+
+      - name: Verify reports generated
+        run: |
+          echo "Checking for generated reports..."
+          ls -la reports/
+          if [ -n "$(find reports/ -name 'comprehensive_report_*.json' -mmin -5)" ]; then
+            echo "✅ New reports found!"
+          else
+            echo "⚠️ No new reports generated in the last 5 minutes"
+          fi
 
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add reports/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update reservoir data [skip ci]" && git push)
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto-update: Daily reservoir data from cloud MQTT [skip ci]
+
+            - Fetched data from CDEC API
+            - Published to HiveMQ Cloud MQTT
+            - Generated reports at $(date -u +%Y-%m-%d\ %H:%M\ UTC)
+            - 21 reservoirs, 7 days of historical data"
+            git push
+            echo "✅ Changes pushed to GitHub"
+          fi
 
