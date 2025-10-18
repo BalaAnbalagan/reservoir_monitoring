@@ -15,21 +15,26 @@ A real-time water level monitoring system for California reservoirs using MQTT p
 - **Scalable Architecture** - Easy to add new reservoirs or data sources
 
 ## Table of Contents
-- [Overview](#overview)
-- [How It Works](#how-it-works)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Web Dashboard](#web-dashboard)
-- [Deployment to Render.com](#deployment-to-rendercom)
-- [Project Structure](#project-structure)
-- [Key Concepts](#key-concepts)
-- [Real-World Applications](#real-world-applications)
+- [1. Overview](#1-overview)
+- [2. What's MQTT?](#2-whats-mqtt)
+- [3. How It Works](#3-how-it-works)
+  - [3.1 Local Development Setup](#31-local-development-setup)
+  - [3.2 Cloud Production Setup](#32-cloud-production-setup)
+- [4. Architecture](#4-architecture)
+- [5. Prerequisites](#5-prerequisites)
+- [6. Installation & Setup](#6-installation--setup)
+- [7. Usage](#7-usage)
+  - [7.1 Local Development](#71-local-development)
+  - [7.2 Cloud Production](#72-cloud-production)
+- [8. Web Dashboard](#8-web-dashboard)
+- [9. Deployment to Render.com](#9-deployment-to-rendercom)
+- [10. Project Structure](#10-project-structure)
+- [11. Key Concepts](#11-key-concepts)
+- [12. Contact](#12-contact)
 
 ---
 
-## Overview
+## 1. Overview
 
 This project simulates the **California Department of Water Resources** monitoring system that:
 - Collects water level data from multiple reservoir sensors
@@ -37,7 +42,13 @@ This project simulates the **California Department of Water Resources** monitori
 - Aggregates data from all reservoirs using a single subscriber
 - Generates comprehensive daily reports
 
-### What's MQTT?
+The system supports **two deployment modes**:
+- **Local Development**: Runs on your machine with Mosquitto broker for testing and development
+- **Cloud Production**: Fully automated cloud-based system using HiveMQ Cloud, MongoDB Atlas, and GitHub Actions
+
+---
+
+## 2. What's MQTT?
 
 Think of MQTT as a **group chat for devices**:
 - **Traditional Way**: Each device calls you individually (inefficient)
@@ -47,55 +58,142 @@ MQTT is like WhatsApp for IoT devices - lightweight, reliable, and scalable!
 
 ---
 
-## How It Works
+## 3. How It Works
 
-### The Big Picture
+This system can operate in two modes: **Local Development** and **Cloud Production**. Both use the same MQTT pub/sub architecture but differ in infrastructure.
 
+### 3.1 Local Development Setup
+
+**Architecture:**
 ```
-┌─────────────┐
-│   Sensors   │ (Publishers)
-│  (Shasta)   │ ──┐
-└─────────────┘   │
-                  │
-┌─────────────┐   │     ┌──────────────┐
-│   Sensors   │───┼────→│ MQTT Broker  │
-│ (Oroville)  │   │     │ (Mosquitto)  │
-└─────────────┘   │     └──────────────┘
-                  │            │
-┌─────────────┐   │            ↓
-│   Sensors   │ ──┘     ┌──────────────┐
-│  (Sonoma)   │         │  Subscriber  │
-└─────────────┘         │   (Report    │
-                        │  Generator)  │
-                        └──────────────┘
-                               ↓
-                        ┌──────────────┐
-                        │   Reports    │
-                        │   (JSON/TXT) │
-                        └──────────────┘
+Your Machine:
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│  ┌─────────────┐                                        │
+│  │  Publishers │ ──┐                                    │
+│  │ (CSV/API)   │   │                                    │
+│  └─────────────┘   │     ┌──────────────┐              │
+│                    ├────→│  Mosquitto   │              │
+│  ┌─────────────┐   │     │    Broker    │              │
+│  │  Publisher  │ ──┘     │ localhost:   │              │
+│  │   (API)     │         │     1883     │              │
+│  └─────────────┘         └──────────────┘              │
+│                                 │                       │
+│                                 ↓                       │
+│                          ┌──────────────┐               │
+│                          │  Subscriber  │               │
+│                          │   (Collect)  │               │
+│                          └──────────────┘               │
+│                                 │                       │
+│                                 ↓                       │
+│                          ┌──────────────┐               │
+│                          │ JSON Reports │               │
+│                          │  (reports/)  │               │
+│                          └──────────────┘               │
+│                                 │                       │
+│                                 ↓                       │
+│                          ┌──────────────┐               │
+│                          │  Flask App   │               │
+│                          │  localhost:  │               │
+│                          │     5000     │               │
+│                          └──────────────┘               │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
 ```
 
-### Step-by-Step Process
+**How it works:**
+1. Install Mosquitto broker on your machine
+2. Run subscriber to listen for messages
+3. Run publisher to send reservoir data
+4. Subscriber saves reports to local JSON files
+5. Flask app reads JSON files and displays dashboard
 
-1. **Data Conversion**: CSV files are converted to JSON format
-2. **Publishers Start**: Reservoir sensors publish water level data to specific topics:
-   - Shasta → `SHASTA/WML`
-   - Oroville → `OROVILLE/WML`
-   - Sonoma → `SONOMA/WML`
-3. **Subscriber Collects**: Single subscriber listens to all topics
-4. **Reports Generated**: Daily summaries with averages, min/max, and totals
+**Use Case:** Development, testing, and learning MQTT concepts
 
 ---
 
-## Architecture
+### 3.2 Cloud Production Setup
+
+**Architecture:**
+```
+GitHub Actions (Scheduled Daily):
+┌─────────────────────────────────────────────────────────┐
+│                                                         │
+│  ┌─────────────┐        ┌──────────────┐               │
+│  │ API Publisher│───────→│   HiveMQ     │               │
+│  │ (CDEC API)  │        │    Cloud     │               │
+│  └─────────────┘        │   Broker     │               │
+│                         │  (TLS 8883)  │               │
+│                         └──────────────┘               │
+│                                │                        │
+│                                ↓                        │
+│                         ┌──────────────┐                │
+│                         │  Subscriber  │                │
+│                         │   (Collect)  │                │
+│                         └──────────────┘                │
+│                                │                        │
+│                                ↓                        │
+│                         ┌──────────────┐                │
+│                         │  MongoDB     │                │
+│                         │   Atlas      │                │
+│                         │  (Cloud DB)  │                │
+│                         └──────────────┘                │
+│                                                         │
+└─────────────────────────────────────────────────────────┘
+                                │
+                                ↓
+                         ┌──────────────┐
+                         │  Render.com  │
+                         │  Flask App   │
+                         │  (reads DB)  │
+                         └──────────────┘
+                                │
+                                ↓
+                         ┌──────────────┐
+                         │  Live Web    │
+                         │  Dashboard   │
+                         └──────────────┘
+```
+
+**How it works:**
+1. **GitHub Actions** runs daily at 8 AM UTC (midnight PST)
+2. **API Publisher** fetches live data from CDEC API
+3. **HiveMQ Cloud** receives data via secure TLS connection
+4. **Subscriber** collects data and saves to MongoDB Atlas
+5. **Render.com** hosts Flask app (reads from MongoDB)
+6. **Users** see live dashboard with fresh daily data
+
+**Use Case:** Production deployment with zero manual intervention
+
+**Benefits:**
+- Completely free (uses free tiers of all services)
+- Fully automated daily updates
+- No local infrastructure needed
+- Secure cloud MQTT with TLS/SSL
+- Scalable database storage
+- Professional cloud deployment
+
+---
+
+## 4. Architecture
 
 ### Components
 
-#### 1. MQTT Broker (Mosquitto) - "The Post Office"
-- Acts as a central message hub
+#### 1. MQTT Broker - "The Post Office"
+
+**Local Mode (Mosquitto):**
+- Acts as a central message hub on your machine
 - Receives messages from publishers
 - Delivers messages to subscribers
 - Runs on `localhost:1883`
+- No authentication required
+
+**Cloud Mode (HiveMQ Cloud):**
+- Cloud-hosted MQTT broker
+- Secure TLS/SSL connections (port 8883)
+- Username/password authentication
+- Free tier: 100 MB/month
+- Globally accessible
 
 #### 2. Publishers (Sensors) - "The Senders"
 - Simulate reservoir sensors
@@ -114,31 +212,62 @@ MQTT is like WhatsApp for IoT devices - lightweight, reliable, and scalable!
 ```
 
 #### 3. Subscriber - "The Listener"
-- Subscribes to all reservoir topics
+- Subscribes to all reservoir topics using wildcard (`+/WML`)
 - Collects data from all reservoirs
 - Generates daily aggregated reports
 
+**Local Mode:**
+- Saves reports to JSON files in `reports/` directory
+- Flask app reads from JSON files
+
+**Cloud Mode:**
+- Saves reports directly to MongoDB Atlas
+- Flask app reads from MongoDB (no file commits)
+
+#### 4. Database Storage
+
+**Local Mode (JSON Files):**
+- Reports stored in `reports/` directory
+- File-based storage
+- No external dependencies
+
+**Cloud Mode (MongoDB Atlas):**
+- Cloud-hosted NoSQL database
+- Free tier: 512 MB storage
+- Automatic scaling
+- Supports queries and aggregations
+
 ---
 
-## Prerequisites
+## 5. Prerequisites
 
 ### Software Requirements
+
+**For Local Development:**
 
 1. **Python 3.7+**
    - Check: `python --version`
 
-2. **MQTT Broker (Mosquitto)**
+2. **MQTT Broker (Mosquitto)** - Required for local mode only
    - Download: https://mosquitto.org/download/
    - Windows: Install the `.exe` installer
    - Linux: `sudo apt-get install mosquitto mosquitto-clients`
    - macOS: `brew install mosquitto`
 
 3. **Python Packages**
-   - `paho-mqtt==1.6.1`
+   - See `requirements.txt` for full list
+   - Main packages: `paho-mqtt`, `flask`, `requests`
+
+**For Cloud Production:**
+
+1. **GitHub Account** - For hosting code and automated workflows
+2. **HiveMQ Cloud Account** - Free tier MQTT broker (https://console.hivemq.cloud)
+3. **MongoDB Atlas Account** - Free tier database (https://www.mongodb.com/atlas)
+4. **Render.com Account** - Free tier web hosting (https://render.com)
 
 ---
 
-## Installation
+## 6. Installation & Setup
 
 ### Step 1: Clone or Download Project
 ```bash
@@ -181,62 +310,262 @@ brew services list              # macOS
 
 ---
 
-## Usage
+## 7. Usage
 
-### Quick Start
+The system supports two operational modes: **Local Development** and **Cloud Production**. Choose the mode that fits your needs.
 
-Run the complete system in 3 steps:
+---
 
-#### Step 1: Convert CSV to JSON
+### 7.1 Local Development
+
+**When to use:** Development, testing, learning MQTT concepts, running without internet
+
+**Requirements:**
+- Mosquitto broker running on your machine
+- Python environment set up
+- No cloud accounts needed
+
+#### Step 1: Start Mosquitto Broker
+
 ```bash
-python csv_to_json.py
+# Windows
+net start mosquitto
+
+# Linux
+sudo systemctl start mosquitto
+
+# macOS
+brew services start mosquitto
 ```
 
-**Output:**
-```
-Converting Shasta_WML.csv to JSON...
-  -> 9 records converted for SHASTA
-Converting Oroville_WML.csv to JSON...
-  -> 9 records converted for OROVILLE
-Converting Sonoma_WML.csv to JSON...
-  -> 9 records converted for SONOMA
-```
+#### Step 2: Test MQTT Connection (Optional)
 
-#### Step 2: Start Subscriber (Terminal 1)
 ```bash
+# Test local MQTT connection
+python test_mqtt.py local
+```
+
+**Expected output:**
+```
+[LOCAL] Using LOCAL MQTT: localhost
+[SUCCESS] CONNECTION SUCCESSFUL!
+   Connected to localhost:1883
+```
+
+#### Step 3: Start Subscriber (Terminal 1)
+
+```bash
+# Use local MQTT (default)
 python subscriber.py --duration 60
 ```
 
-**Options:**
-- `--broker`: MQTT broker address (default: `localhost`)
-- `--port`: MQTT broker port (default: `1883`)
-- `--duration`: How long to listen in seconds (default: `30`)
+**What happens:**
+- Connects to `localhost:1883`
+- Listens for messages on all reservoir topics (`+/WML`)
+- Saves reports to `reports/` directory as JSON files
+- Runs for 60 seconds then generates reports
 
-#### Step 3: Start Publisher (Terminal 2)
+#### Step 4: Start Publisher (Terminal 2)
+
+**Option A: CSV-based publisher (for testing)**
 ```bash
+# Publish data from CSV files
 python publisher.py --reservoir ALL
 ```
 
-**Options:**
-- `--reservoir`: Which reservoir to publish (`SHASTA`, `OROVILLE`, `SONOMA`, or `ALL`)
-- `--broker`: MQTT broker address (default: `localhost`)
-- `--port`: MQTT broker port (default: `1883`)
-
-**Examples:**
+**Option B: API-based publisher (live CDEC data)**
 ```bash
-# Publish only Shasta data
-python publisher.py --reservoir SHASTA
+# Fetch live data from CDEC API and publish
+python api_publisher.py --reservoir ALL --days 7
+```
 
-# Publish to remote broker
-python publisher.py --reservoir ALL --broker 192.168.1.100
+**What happens:**
+- Fetches reservoir data (from CSV or API)
+- Publishes to local Mosquitto broker
+- Messages sent to topics like `SHASTA/WML`, `OROVILLE/WML`
+- Subscriber receives and processes messages
 
-# Publish all reservoirs to custom port
-python publisher.py --reservoir ALL --port 1884
+#### Step 5: View Dashboard
+
+```bash
+# Start Flask app
+python app.py
+```
+
+Visit: `http://localhost:5000`
+
+**What happens:**
+- Flask app reads reports from `reports/` directory
+- Displays interactive dashboard with charts
+- Shows latest water level data
+
+**Complete Local Workflow:**
+```bash
+# Terminal 1: Start subscriber
+python subscriber.py --duration 60
+
+# Terminal 2: Publish data (within 60 seconds)
+python api_publisher.py --reservoir ALL --days 7
+
+# Terminal 3: Start web dashboard
+python app.py
 ```
 
 ---
 
-## Web Dashboard
+### 7.2 Cloud Production
+
+**When to use:** Production deployment, automated daily updates, no local infrastructure
+
+**Requirements:**
+- GitHub repository set up
+- HiveMQ Cloud account (free tier)
+- MongoDB Atlas account (free tier)
+- Render.com account (free tier)
+- GitHub Secrets configured
+
+#### How Cloud Production Works
+
+**Automated Daily Workflow:**
+
+```
+Every day at 8:00 AM UTC (midnight PST):
+
+1. GitHub Actions workflow triggers automatically
+2. Fetches live data from CDEC API (21 reservoirs, 7 days)
+3. Publishes data to HiveMQ Cloud (secure TLS)
+4. Subscriber collects messages from HiveMQ Cloud
+5. Saves reports to MongoDB Atlas
+6. Render.com serves Flask app (reads from MongoDB)
+7. Users see updated dashboard with fresh data
+```
+
+**No manual intervention required!**
+
+#### Setup Steps
+
+**1. Configure GitHub Secrets**
+
+Add these secrets to your GitHub repository (Settings → Secrets → Actions):
+
+- `MQTT_CLOUD_BROKER`: Your HiveMQ cluster URL
+- `MQTT_CLOUD_PORT`: `8883`
+- `MQTT_CLOUD_USER`: Your HiveMQ username
+- `MQTT_CLOUD_PASS`: Your HiveMQ password
+- `MONGODB_URI`: Your MongoDB Atlas connection string
+
+See [GITHUB_SECRETS_SETUP.md](GITHUB_SECRETS_SETUP.md) for detailed instructions.
+
+**2. Configure Render.com Environment Variables**
+
+Add these environment variables in Render dashboard:
+
+- `DB_MODE`: `mongodb`
+- `MONGODB_URI`: Your MongoDB Atlas connection string
+- `FLASK_ENV`: `production`
+
+**3. Test the Workflow**
+
+```bash
+# Go to GitHub repository → Actions tab
+# Select "Update Reservoir Data with Cloud MQTT"
+# Click "Run workflow" → "Run workflow"
+# Watch the workflow execute in real-time
+```
+
+**Expected workflow output:**
+```
+✅ Subscriber connects to HiveMQ Cloud
+✅ Publisher fetches data from CDEC API
+✅ Data published to cloud MQTT
+✅ Subscriber collects messages
+✅ Reports saved to MongoDB
+✅ Workflow completes successfully
+```
+
+**4. Access Live Dashboard**
+
+Visit: `https://your-app-name.onrender.com`
+
+**What you'll see:**
+- Real-time reservoir water levels
+- Interactive charts and visualizations
+- Historical data trends
+- Automatic daily updates
+
+#### Manual Cloud Testing (Optional)
+
+You can also test cloud MQTT manually from your local machine:
+
+```bash
+# Set environment to cloud mode
+set MQTT_ENV=cloud          # Windows
+export MQTT_ENV=cloud       # Linux/macOS
+
+# Test cloud MQTT connection
+python test_mqtt.py cloud
+
+# Run subscriber with cloud MQTT
+python subscriber.py --duration 90
+
+# Run publisher with cloud MQTT
+python api_publisher.py --reservoir ALL --days 7
+```
+
+#### Monitoring and Logs
+
+**GitHub Actions:**
+- View workflow runs: Repository → Actions tab
+- Check logs for each step
+- See data collection progress
+
+**Render.com:**
+- View deployment logs
+- Monitor application health
+- Check build status
+
+**MongoDB Atlas:**
+- View stored reports: Collections → daily_reports
+- Monitor database size
+- Check connection status
+
+---
+
+### Switching Between Local and Cloud
+
+The system automatically detects the environment using the `MQTT_ENV` variable:
+
+**Local Mode (default):**
+```bash
+# No environment variable needed
+python subscriber.py
+python publisher.py --reservoir ALL
+```
+
+**Cloud Mode:**
+```bash
+# Set environment variable
+set MQTT_ENV=cloud          # Windows
+export MQTT_ENV=cloud       # Linux/macOS
+
+python subscriber.py --duration 90
+python api_publisher.py --reservoir ALL
+```
+
+**Database Mode:**
+
+Set `DB_MODE` to choose storage:
+```bash
+# Use JSON files (local)
+set DB_MODE=json
+
+# Use MongoDB (cloud)
+set DB_MODE=mongodb
+```
+
+---
+
+## 8. Web Dashboard
 
 The project includes a Flask-powered web dashboard for visualizing reservoir data in real-time.
 
@@ -284,7 +613,7 @@ The dashboard will be available at: `http://localhost:5000`
 
 ---
 
-## Deployment to Render.com
+## 9. Deployment to Render.com
 
 This project is configured for easy deployment to Render.com's free tier.
 
@@ -332,7 +661,7 @@ Add in Render dashboard if needed:
 
 ---
 
-## Project Structure
+## 10. Project Structure
 
 ```
 reservoir_monitoring/
@@ -374,7 +703,7 @@ reservoir_monitoring/
 
 ---
 
-## Key Concepts
+## 11. Key Concepts
 
 ### MQTT Topics
 
@@ -586,10 +915,15 @@ This project is for educational purposes as part of the California Department of
 
 ---
 
-## Contact
+## 12. Contact
 
-For questions or issues, please refer to the assignment guidelines or contact your instructor.
+**Project Author:** Bala Anbalagan
+**Email:** Bala.Anbalagan@sjsu.edu
+**GitHub Repository:** https://github.com/BalaAnbalagan/reservoir_monitoring
+
+For questions, issues, or feedback about this project, please contact via email or open an issue on GitHub.
 
 ---
 
-**Built with Python, MQTT, and Mosquitto**
+**Built with Python, MQTT, Flask, and Cloud Services**
+**Powered by:** HiveMQ Cloud, MongoDB Atlas, Render.com, and GitHub Actions
