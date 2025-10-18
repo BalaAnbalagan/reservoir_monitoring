@@ -2,6 +2,8 @@
 MQTT Subscriber for Reservoir Data Collection
 Single subscriber that collects Water Mark Level (WML) data from all reservoir topics
 Aggregates data and generates daily reports
+
+Supports both local and cloud MQTT brokers
 """
 
 import json
@@ -11,22 +13,50 @@ from datetime import datetime
 from pathlib import Path
 from collections import defaultdict
 import paho.mqtt.client as mqtt
+import ssl
+from mqtt_config import get_mqtt_config, print_config
 
 
 class ReservoirSubscriber:
     """MQTT Subscriber that collects data from all reservoir topics"""
 
-    def __init__(self, broker_address="localhost", broker_port=1883):
+    def __init__(self, broker_address=None, broker_port=None, username=None, password=None, use_tls=False):
         """
         Initialize MQTT subscriber
 
         Args:
-            broker_address: MQTT broker address
-            broker_port: MQTT broker port
+            broker_address: MQTT broker address (if None, uses config)
+            broker_port: MQTT broker port (if None, uses config)
+            username: MQTT username (optional)
+            password: MQTT password (optional)
+            use_tls: Enable TLS/SSL (for cloud brokers)
         """
-        self.broker_address = broker_address
-        self.broker_port = broker_port
+        # Get config from mqtt_config if not provided
+        if broker_address is None:
+            config = get_mqtt_config()
+            self.broker_address = config['broker']
+            self.broker_port = config['port']
+            self.username = config.get('username')
+            self.password = config.get('password')
+            self.use_tls = config.get('use_tls', False)
+        else:
+            self.broker_address = broker_address
+            self.broker_port = broker_port
+            self.username = username
+            self.password = password
+            self.use_tls = use_tls
+
         self.client = mqtt.Client(client_id="reservoir_subscriber", clean_session=True)
+
+        # Set username/password if provided
+        if self.username and self.password:
+            self.client.username_pw_set(self.username, self.password)
+
+        # Enable TLS if required (for cloud brokers like HiveMQ)
+        if self.use_tls:
+            self.client.tls_set(cert_reqs=ssl.CERT_REQUIRED, tls_version=ssl.PROTOCOL_TLSv1_2)
+            self.client.tls_insecure_set(False)
+
         self.client.on_connect = self.on_connect
         self.client.on_message = self.on_message
 
@@ -234,8 +264,17 @@ def main():
 
     args = parser.parse_args()
 
+    # Print MQTT configuration
+    print_config()
+
     # Initialize subscriber
-    subscriber = ReservoirSubscriber(broker_address=args.broker, broker_port=args.port)
+    # If --broker is specified, use it; otherwise use config from mqtt_config
+    if args.broker != 'localhost' or args.port != 1883:
+        # Command-line args provided
+        subscriber = ReservoirSubscriber(broker_address=args.broker, broker_port=args.port)
+    else:
+        # Use mqtt_config.py settings
+        subscriber = ReservoirSubscriber()
 
     try:
         subscriber.connect()
