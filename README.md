@@ -313,41 +313,113 @@ python subscriber.py --broker 192.168.1.100 --port 1884
 python app.py
 ```
 
-The dashboard runs on `http://localhost:5000`
+The dashboard runs on **`http://localhost:5000`**
+
+---
 
 **Dashboard Features:**
 
-**1. Summary View (`/`)**
-- Total water storage across all reservoirs
-- Period changes (first vs last day)
+#### 1. Summary View (`/`)
+
+**URL:** `http://localhost:5000/`
+
+**Features:**
+- Total water storage across all reservoirs (TAF)
+- Period changes (first vs last day) - Shows increase/decrease
 - Number of active reservoirs
-- Summary statistics cards
+- Summary statistics cards with visual indicators
+- Quick view charts:
+  - Water Levels Over Time (line chart)
+  - Current Levels Comparison (bar chart)
+  - Total Capacity Trend (area chart)
+- "View Detailed Analysis" button
+- "Download JSON Data" button
+- Last updated timestamp
 
-**2. Detailed View (`/detailed`)**
-- **Interactive Bar Charts** - Current water levels by reservoir
-- **Stacked Bar Charts** - Water distribution over time
-- **Change Analysis** - Green bars (gain) vs Red bars (loss)
-- **Toggleable Tables** - Show/hide detailed data tables
-- Day-over-day change tracking
+**Data Shown:**
+- Total Water Volume in TAF
+- Period Change (positive/negative)
+- Active Reservoirs count
+- Reporting Period (days of data)
 
-**3. Advanced Charts (`/detailed/charts`)**
-- Top 10 largest reservoirs
+---
+
+#### 2. Detailed View (`/detailed`)
+
+**URL:** `http://localhost:5000/detailed`
+
+**Features:**
+- **Current Water Levels (Bar Chart)**
+  - Sorted by capacity (largest first)
+  - Color-coded bars for easy identification
+  - Shows all 8 active reservoirs
+
+- **Stacked Water Levels Over Time**
+  - Complete time series visualization
+  - All reservoirs stacked to show total capacity
+  - Color-coded by reservoir
+  - Shows 7 days of data trends
+
+- **Water Level Changes Chart**
+  - Green bars = water gains
+  - Red bars = water losses
+  - Day-over-day comparison
+
+- **Toggleable Data Tables**
+  - Detailed historical data tables
+  - Hidden by default for clean view
+  - Click "Show Tables" to expand
+  - Complete day-by-day breakdown
+
+**Navigation:**
+- ← Back to Summary
+- Interactive Charts (advanced view)
+- Download JSON
+
+---
+
+#### 3. Advanced Charts (`/detailed/charts`)
+
+**URL:** `http://localhost:5000/detailed/charts`
+
+**Features:**
+- Top 10 largest reservoirs (horizontal bar chart)
 - Multi-day comparison with interactive controls
 - Weekly comparison view
 - First vs Last day analysis
 
-**4. API Endpoints** (for developers)
-- `/api/summary` - Summary statistics (JSON)
-- `/api/latest` - Latest day data (JSON)
-- `/api/historical` - Complete historical data (JSON)
-- `/api/changes` - Day-over-day changes (JSON)
-- `/api/reservoir/<name>` - Specific reservoir data (JSON)
+---
+
+#### 4. API Endpoints (for developers/integrations)
+
+```
+GET http://localhost:5000/api/summary          # Summary statistics (JSON)
+GET http://localhost:5000/api/latest           # Latest day data (JSON)
+GET http://localhost:5000/api/historical       # Complete historical data (JSON)
+GET http://localhost:5000/api/changes          # Day-over-day changes (JSON)
+GET http://localhost:5000/api/reservoir/<name> # Specific reservoir (JSON)
+```
+
+**Example API Usage:**
+```bash
+# Get summary statistics
+curl http://localhost:5000/api/summary
+
+# Get specific reservoir data
+curl http://localhost:5000/api/reservoir/SHASTA
+
+# Download historical data
+curl http://localhost:5000/api/historical > data.json
+```
+
+---
 
 **Technologies:**
-- Flask (Backend)
-- Chart.js (Interactive charts)
-- Bootstrap (Responsive styling)
-- Jinja2 (Templating)
+- **Flask** - Python web framework
+- **Chart.js** - Interactive JavaScript charts
+- **Bootstrap** - Responsive CSS framework
+- **Jinja2** - HTML templating engine
+- **JSON** - Data storage and API responses
 
 ---
 
@@ -694,76 +766,162 @@ python api_publisher.py --reservoir ALL --days 7
 
 ### 4.4 Cloud Dashboard
 
-**Accessing the Dashboard:**
+**Live Production URL:** **`https://reservoir-monitoring.onrender.com`**
 
-Visit your Render.com URL: `https://your-app-name.onrender.com`
+Share this URL with your professor or anyone to view the live dashboard!
 
-**First Request:**
-- If app is sleeping, it takes ~30 seconds to wake up
-- Subsequent requests are fast
+---
+
+**Important Notes:**
+- **First Request:** If the app is sleeping (free tier), it takes ~30 seconds to wake up
+- **Subsequent Requests:** Fast response times after initial wake-up
+- **Data Source:** Real-time data from MongoDB Atlas
+- **Updates:** Automatically updated daily at 8 AM UTC via GitHub Actions
+
+---
 
 **Dashboard Features:**
 
-**1. Summary View (`/`)**
-- Total water storage across all active reservoirs
-- Period changes (first day vs last day)
-- Number of active reservoirs
-- Real-time data from MongoDB
+#### 1. Summary View (`/`)
 
-**2. Detailed View (`/detailed`)**
-- **Interactive Bar Charts:**
-  - Current water levels by reservoir
-  - Color-coded by capacity
-- **Stacked Bar Charts:**
-  - Water distribution over time
-  - Shows all reservoirs stacked
-- **Change Analysis:**
-  - Green bars show water gains
-  - Red bars show water losses
-- **Toggleable Tables:**
-  - Detailed data tables
-  - Hidden by default (click to show)
+**URL:** `https://reservoir-monitoring.onrender.com/`
 
-**3. Advanced Charts (`/detailed/charts`)**
-- Top 10 largest reservoirs
-- Multi-day comparison
-- Weekly trends
-- First vs last day analysis
+**Features:**
+- **Total Water Volume** - Aggregated across all active reservoirs (in TAF)
+- **Period Change** - Shows net increase/decrease (red = loss, green = gain)
+- **Active Reservoirs** - Count of reservoirs with current data (8 locations)
+- **Reporting Period** - Number of days of data available (7 days)
+- **Quick View Charts:**
+  - Water Levels Over Time (line chart showing trends)
+  - Current Levels Comparison (bar chart by reservoir)
+  - Total Capacity Trend (area chart showing aggregate)
+- **Action Buttons:**
+  - "View Detailed Analysis" - Navigate to detailed charts
+  - "Download JSON Data" - Export raw data
+  - "Refresh Data" - Reload latest from MongoDB
+- **Last Updated Timestamp** - Shows when data was last refreshed
 
-**4. API Endpoints** (for developers/integrations)
+**Live Data from MongoDB:**
+- Reads directly from MongoDB Atlas cloud database
+- No file commits needed for updates
+- Instant data refresh on page load
+
+---
+
+#### 2. Detailed View (`/detailed`)
+
+**URL:** `https://reservoir-monitoring.onrender.com/detailed`
+
+**Features:**
+- **Current Water Levels (Bar Chart)**
+  - All 8 active reservoirs displayed
+  - Sorted by capacity (SHASTA, NEW_MELONES, FOLSOM, etc.)
+  - Color-coded bars for visual distinction
+  - Shows current TAF values
+
+- **Stacked Water Levels Over Time**
+  - Complete 7-day time series
+  - All reservoirs stacked to show total capacity
+  - Color-coded layers by reservoir
+  - Interactive tooltips on hover
+  - Shows water distribution trends
+
+- **Water Level Changes Chart**
+  - Day-over-day comparison
+  - Green bars = water gains
+  - Red bars = water losses
+  - Numerical values displayed
+
+- **Toggleable Data Tables**
+  - Click "Show Tables" to expand
+  - Detailed historical data
+  - Day-by-day breakdown for each reservoir
+  - Complete TAF values
+
+**Navigation:**
+- ← Back to Summary
+- 📊 Interactive Charts (advanced visualizations)
+- Download JSON (export data)
+
+---
+
+#### 3. Advanced Charts (`/detailed/charts`)
+
+**URL:** `https://reservoir-monitoring.onrender.com/detailed/charts`
+
+**Features:**
+- Top 10 largest reservoirs (horizontal bar chart)
+- Multi-day comparison with interactive date controls
+- Weekly comparison view
+- First vs Last day analysis
+- Custom date range selection
+
+---
+
+#### 4. API Endpoints (for developers/integrations)
+
+**Base URL:** `https://reservoir-monitoring.onrender.com`
+
 ```
-GET /api/summary          # Summary statistics
-GET /api/latest           # Latest day data
-GET /api/historical       # Complete historical data
-GET /api/changes          # Day-over-day changes
-GET /api/reservoir/<name> # Specific reservoir data
+GET /api/summary          # Summary statistics (JSON)
+GET /api/latest           # Latest day data (JSON)
+GET /api/historical       # Complete historical data (JSON)
+GET /api/changes          # Day-over-day changes (JSON)
+GET /api/reservoir/<name> # Specific reservoir data (JSON)
 ```
 
 **Example API Usage:**
 ```bash
 # Get summary statistics
-curl https://your-app-name.onrender.com/api/summary
+curl https://reservoir-monitoring.onrender.com/api/summary
 
-# Get specific reservoir
-curl https://your-app-name.onrender.com/api/reservoir/SHASTA
+# Get specific reservoir data
+curl https://reservoir-monitoring.onrender.com/api/reservoir/SHASTA
+
+# Get historical data for all reservoirs
+curl https://reservoir-monitoring.onrender.com/api/historical
+
+# Get day-over-day changes
+curl https://reservoir-monitoring.onrender.com/api/changes
 ```
 
+**Example JSON Response:**
+```json
+{
+  "total_water_taf": 5587.8,
+  "period_change_taf": -19.8,
+  "active_reservoirs": 8,
+  "reporting_days": 7,
+  "last_updated": "2025-10-18T11:29:00"
+}
+```
+
+---
+
 **Data Updates:**
-- Dashboard automatically shows latest data from MongoDB
-- No page refresh needed (data is current)
-- Updates daily at 8 AM UTC
+- ✅ Automatic daily updates at 8 AM UTC (midnight PST)
+- ✅ GitHub Actions fetches fresh data from CDEC API
+- ✅ Data saved directly to MongoDB Atlas
+- ✅ Dashboard reads from MongoDB (no rebuild needed)
+- ✅ Always shows latest available data
 
 **Performance:**
-- Fast response times (MongoDB queries optimized)
-- Responsive design (works on mobile)
-- Interactive charts load quickly
-- Free tier: App sleeps after 15 min inactivity
+- Fast MongoDB queries (optimized indexes)
+- Responsive design (mobile-friendly)
+- Interactive Chart.js visualizations
+- Free tier limitations:
+  - App sleeps after 15 minutes of inactivity
+  - ~30 seconds wake-up time on first request
+  - 750 hours/month free
 
-**Sharing:**
-- Share your Render.com URL with anyone
-- No login required to view dashboard
-- Publicly accessible
-- Professional presentation
+**Sharing with Professor:**
+Simply share this URL: **`https://reservoir-monitoring.onrender.com`**
+
+✅ No login required
+✅ Publicly accessible
+✅ Professional presentation
+✅ Live data from MongoDB
+✅ Automated daily updates
 
 ---
 
