@@ -986,15 +986,38 @@ reservoir_monitoring/
 
 Visual examples of the dashboard in action are available in the [`screenshots/`](screenshots/) directory.
 
-### Local Dashboard Screenshots:
-- **Summary View:** See [`screenshots/local_summary_view.png`](screenshots/local_summary_view.png)
-- **Detailed View:** See [`screenshots/local_detailed_view.png`](screenshots/local_detailed_view.png)
+### Local Dashboard Screenshots (localhost:5000):
+1. **Summary View** - [`local_summary_view.png`](screenshots/local_summary_view.png)
+   - Shows total water volume, period change, active reservoirs, and quick view charts
+   - URL: http://localhost:5000/
 
-### Cloud Dashboard Screenshots:
-- **Summary View:** See [`screenshots/cloud_summary_view.png`](screenshots/cloud_summary_view.png)
-- **Detailed View:** See [`screenshots/cloud_detailed_view.png`](screenshots/cloud_detailed_view.png)
+2. **Detailed View** - [`local_detailed_view.png`](screenshots/local_detailed_view.png)
+   - Shows bar charts, stacked charts, and water level changes
+   - URL: http://localhost:5000/detailed
 
-**Note:** To add your own screenshots, follow the instructions in [`screenshots/README.md`](screenshots/README.md)
+3. **Stacked Chart Detail** - [`local_detailed_stacked_chart.png`](screenshots/local_detailed_stacked_chart.png)
+   - Closeup of stacked water levels over time chart
+   - URL: http://localhost:5000/detailed
+
+### Cloud Dashboard Screenshots (https://reservoir-monitoring.onrender.com):
+1. **Summary View** - [`cloud_summary_view.png`](screenshots/cloud_summary_view.png)
+   - Live production dashboard summary with real MongoDB data
+   - URL: https://reservoir-monitoring.onrender.com/
+
+2. **Detailed View** - [`cloud_detailed_view.png`](screenshots/cloud_detailed_view.png)
+   - Live production detailed analysis with interactive charts
+   - URL: https://reservoir-monitoring.onrender.com/detailed
+
+3. **Stacked Chart Detail** - [`cloud_detailed_stacked_chart.png`](screenshots/cloud_detailed_stacked_chart.png)
+   - Closeup of cloud dashboard stacked chart
+   - URL: https://reservoir-monitoring.onrender.com/detailed
+
+**These screenshots demonstrate:**
+- ✅ Both local and cloud deployments working correctly
+- ✅ Single subscriber collecting data from all reservoirs
+- ✅ Interactive Chart.js visualizations
+- ✅ Real-time data from CDEC API
+- ✅ Professional dashboard presentation
 
 ---
 
