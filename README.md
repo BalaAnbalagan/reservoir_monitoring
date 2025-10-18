@@ -948,6 +948,14 @@ reservoir_monitoring/
 │   ├── comprehensive_report_*.json # Detailed JSON reports
 │   └── summary_report_*.txt        # Human-readable summaries
 │
+├── screenshots/                    # Dashboard screenshots (artifacts)
+│   ├── README.md                  # Screenshot guidelines
+│   ├── local_summary_view.png     # Local dashboard summary
+│   ├── local_detailed_view.png    # Local dashboard detailed view
+│   ├── cloud_summary_view.png     # Cloud dashboard summary
+│   ├── cloud_detailed_view.png    # Cloud dashboard detailed view
+│   └── *.png                      # Additional screenshots
+│
 ├── .github/workflows/              # GitHub Actions
 │   └── update-data.yml            # Daily automated updates
 │
@@ -971,6 +979,22 @@ reservoir_monitoring/
 ├── WEB_DASHBOARD_GUIDE.md         # Dashboard documentation
 └── README.md                       # This file
 ```
+
+---
+
+## 5.1. Dashboard Screenshots (Artifacts)
+
+Visual examples of the dashboard in action are available in the [`screenshots/`](screenshots/) directory.
+
+### Local Dashboard Screenshots:
+- **Summary View:** See [`screenshots/local_summary_view.png`](screenshots/local_summary_view.png)
+- **Detailed View:** See [`screenshots/local_detailed_view.png`](screenshots/local_detailed_view.png)
+
+### Cloud Dashboard Screenshots:
+- **Summary View:** See [`screenshots/cloud_summary_view.png`](screenshots/cloud_summary_view.png)
+- **Detailed View:** See [`screenshots/cloud_detailed_view.png`](screenshots/cloud_detailed_view.png)
+
+**Note:** To add your own screenshots, follow the instructions in [`screenshots/README.md`](screenshots/README.md)
 
 ---
 
